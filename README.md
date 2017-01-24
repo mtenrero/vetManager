@@ -56,6 +56,29 @@ List of vaccines, equipment… All the stuff used in the veterinary practice tha
 
 ----------
 
+Internal Service
+--------------------
+
+- **Emailing service for appointment reminders**
+
+
+-----------
+
+Optional features
+-------------------
+
+1. **Access based on roles**
+2. **mongoDB for Managers**
+
+----------
+
+3rd Party frameworks
+-------------------
+
+ - MaterializeCSS (Frontend)
+
+----------
+
 
 Contributors
 -------------
@@ -65,4 +88,3 @@ Contributors
  - Jesús Guitérrez López ([@Was17](https://github.com/Was17))
 
 Our Trello dashboard: https://trello.com/b/d1yQOm1i/dad-development
-
