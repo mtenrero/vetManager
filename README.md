@@ -61,7 +61,7 @@ Contributors
 -------------
 
  - Marcos Tenrero Morán ([@mtenrero](https://github.com/mtenrero))
- - Adrián Rubio ([@adrxx](https://github.com/adrxx))
+ - Adrián Rubio Morlote ([@adrxx](https://github.com/adrxx))
  - Jesús Guitérrez López ([@Was17](https://github.com/Was17))
 
 Our Trello dashboard: https://trello.com/b/d1yQOm1i/dad-development
