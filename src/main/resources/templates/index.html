@@ -1,33 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+{{> partials/injections }}
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-</head>
 <body>
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Card Title</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+    <header>
+        {{>  partials/navigation }}
+    </header>
+
+    <!-- CONTENT -->
+    <main>
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s1 m4 l3 valign">
+                    <a class="waves-effect waves-light btn-large"><i class="material-icons left">room</i>Dónde estamos</a>
                 </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
+                <div class="col s1 m4 l6 center-align black-text ce">
+                    <b>Clínica Veterinaria DonGuau</b><br>
+                    Calle GuauMiau, 11, Madrid<br>
+                    91 123 45 67
+                </div>
+                <div class="col s1 m4 l3 valign">
+                    <a class="waves-effect waves-light btn-large"><i class="material-icons right">info_outline</i>Contacto</a>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+    </main>
+
+    <footer>
+    {{> partials/footer }}
+    </footer>
 </body>
-</html>

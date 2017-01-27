@@ -2,10 +2,16 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <dependency>spring_boot_es.urjc.etsii.mtenrero.VetmanagerApplication</dependency>
+          <file>file://$MODULE_DIR$/config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/es/urjc/etsii/mtenrero/VetmanagerApplication.java</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -77,5 +83,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.json:json:20140107" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
+    <orderEntry type="library" name="org.springframework.boot:spring-boot-devtools:1.4.3.RELEASE" level="project" />
+    <orderEntry type="library" name="materialize" level="application" />
   </component>
 </module>
