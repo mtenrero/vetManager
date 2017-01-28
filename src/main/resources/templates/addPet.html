@@ -1,0 +1,27 @@
+{{> partials/injections }}
+<body>
+{{> partials/navigationDashboard }}
+<main class="main-content">
+    <nav class="grey lighten-2 black-text">
+        <div class="nav-wrapper black-text">
+            <div class="col s12 black-text">
+                <a href="/dashboard/pets" class="breadcrumb black-text">   <i class="fa fa-paw"></i>
+                     Pets</a>
+                <a href="#!" class="breadcrumb black-text">Add new pet to patitent registry</a>
+            </div>
+        </div>
+    </nav>
+
+    <form class="col s12">
+    {{> partialforms/owner_data }}
+    {{> partialforms/pet_data }}
+    </form>
+
+
+
+</main>
+
+{{> partials/footer }}
+<script src="/resources/js/dashboard.js"></script>
+
+</body>

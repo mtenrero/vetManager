@@ -17,4 +17,13 @@ public class ClientController {
 
         return "clients";
     }
+
+    @RequestMapping("/dashboard/clients/new")
+    public String addClient(Model model) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Add new Client");
+
+        model.addAttribute("navClients", true);
+
+        return "addClient";
+    }
 }

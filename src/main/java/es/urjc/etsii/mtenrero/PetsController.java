@@ -17,4 +17,13 @@ public class PetsController {
 
         return "pets";
     }
+
+    @RequestMapping("/dashboard/pets/new")
+    public String addPet(Model model) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Add new pet");
+
+        model.addAttribute("navPets", true);
+
+        return "addPet";
+    }
 }
