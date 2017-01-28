@@ -12,6 +12,7 @@ public class LandingController {
 
     @RequestMapping("/")
     public String getLanding(Model model) {
+        model.addAttribute("title", VetmanagerApplication.appName);
         return "index";
     }
 }

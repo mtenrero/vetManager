@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by mtenrero on 28/01/2017.
  */
 @Controller
-public class ClientController {
-    @RequestMapping("/dashboard/clients")
+public class AppointmentController {
+    @RequestMapping("/dashboard/appointments")
     public String getLanding(Model model) {
-        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("title", VetmanagerApplication.appName + ": Appointments");
+        model.addAttribute("navAppointments", true);
 
-        model.addAttribute("navClients", true);
-
-        return "clients";
+        return "appointments";
     }
 }
