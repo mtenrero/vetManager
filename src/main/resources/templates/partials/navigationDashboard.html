@@ -12,38 +12,38 @@
         <nav id="horizontal-nav" class="white hide-on-med-and-down">
             <div class="nav-wrapper">
                 <ul id="ul-horizontal-nav" class="left hide-on-med-and-down">
-                    <li class="active">
-                        <a href="/dashboard" class="cyan-text">
+                    <li class="{{#navDashboard}}active{{/navDashboard}}">
+                        <a href="/dashboard" class="deep-purple-text">
                             <i class="fa fa-desktop"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/dashboard/clients" class="cyan-text">
+                    <li class="{{#navClients}}active{{/navClients}}">
+                        <a href="/dashboard/clients" class="deep-purple-text">
                             <i class="fa fa-users"></i>
                             <span>Clients</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="dropdown-menu cyan-text" href="/dashboard/pets" >
+                    <li class="{{#navPets}}active{{/navPets}}">
+                        <a class="dropdown-menu deep-purple-text" href="/dashboard/pets" >
                             <i class="fa fa-paw"></i>
                             <span>Pets</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="dropdown-menu cyan-text" href="/dashboard/appointments">
+                    <li class="{{#navAppointments}}active{{/navAppointments}}">
+                        <a class="dropdown-menu deep-purple-text" href="/dashboard/appointments">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
                             <span>Appointments<i class="mdi-navigation-arrow-drop-down right"></i></span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/dashboard/inventory" class="cyan-text">
+                    <li class="{{#navInventory}}active{{/navInventory}}">
+                        <a href="/dashboard/inventory" class="deep-purple-text">
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             <span>Inventory</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-menu cyan-text" href="/dashboard/settings" data-activates="settingsDropdown">
+                        <a class="dropdown-menu deep-purple-text" href="/dashboard/settings" data-activates="settingsDropdown">
                             <i class="fa fa-cogs" aria-hidden="true"></i>
                             <span>Settings<i class="mdi-navigation-arrow-drop-down right"></i></span>
                         </a>

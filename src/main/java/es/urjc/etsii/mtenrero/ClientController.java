@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by mtenrero on 28/01/2017.
  */
 @Controller
-public class DashboardController {
-    @RequestMapping("/dashboard")
+public class ClientController {
+    @RequestMapping("/dashboard/clients")
     public String getLanding(Model model) {
-        model.addAttribute("navDashboard", true);
+        model.addAttribute("navClients", true);
 
-        return "dashboard";
+        return "clients";
     }
 }
