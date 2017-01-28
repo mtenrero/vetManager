@@ -7,7 +7,22 @@
           <dependency>spring_boot_es.urjc.etsii.mtenrero.VetmanagerApplication</dependency>
           <file>file://$MODULE_DIR$/config.xml</file>
           <file>file://$MODULE_DIR$/src/main/java/es/urjc/etsii/mtenrero/VetmanagerApplication.java</file>
+          <file>file://$MODULE_DIR$/vetManager-servlet.xml</file>
         </fileset>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$" relative="/WEB-INF" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -22,6 +37,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="org.springframework.boot:spring-boot-devtools:1.4.3.RELEASE" level="project" />
+    <orderEntry type="library" name="materialize" level="application" />
+    <orderEntry type="library" name="com.github.warmuuh:libsass-maven-plugin:0.2.5-libsass_3.3.6" level="project" />
+    <orderEntry type="library" name="org.apache.maven.plugins:maven-resources-plugin:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-mongodb:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.4.3.RELEASE" level="project" />
@@ -83,7 +102,5 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.json:json:20140107" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="org.springframework.boot:spring-boot-devtools:1.4.3.RELEASE" level="project" />
-    <orderEntry type="library" name="materialize" level="application" />
   </component>
 </module>
