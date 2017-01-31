@@ -1,18 +1,26 @@
 {{> partials/injections }}
+{{> partials/datatablesInject }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.material.min.css">
+
 <body>
 {{> partials/navigationDashboard }}
 <main class="main-content">
-    <br>
-    <br>
-    <div class="row">
-        <div class="col s4 offset-s1">
-            <a href="/dashboard/clients/new"><button class="purple btn waves-effect waves-light">New Client
-                <i class="material-icons right">playlist_add</i>
-            </button></a>
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col s4 offset-s1">
+                <a href="/dashboard/clients/new"><button class="purple btn waves-effect waves-light">New Client
+                    <i class="material-icons right">playlist_add</i>
+                </button></a>
+            </div>
         </div>
-    </div>
 
+        {{> partials/client_table }}
+    </div>
 </main>
 
 {{> partials/footer }}
+<script src="/resources/js/datatables.js"></script>
 </body>
