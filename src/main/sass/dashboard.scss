@@ -65,3 +65,19 @@ body {
   text-align: center;
 }
 
+.menu-card {
+  a {
+    width: 100%;
+    display: block;
+    span {
+      display: block;
+      text-align: center;
+    }
+    i {
+      color: white;
+      display: block;
+      width: 100%;
+    }
+  }
+
+}

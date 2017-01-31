@@ -1,62 +1,66 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
 .main-content {
-    margin-top: 64px;
-    flex: 1;
-}
+  margin-top: 64px;
+  flex: 1; }
 
 #ul-horizontal-nav > li > a {
-    padding: 0 8px;
-    text-align: center;
-}
-
+  padding: 0 8px;
+  text-align: center; }
 
 #horizontal-nav {
-    text-align: center;
-    margin-top: 64px;
-    z-index: -1;
-}
+  text-align: center;
+  margin-top: 64px;
+  z-index: -1; }
+
 /*----------------------------------------
     Horizontal Menu
 ------------------------------------------*/
 #horizontal-nav ul li {
-    text-align: center;
-}
+  text-align: center; }
 
 #horizontal-nav ul li a i {
-    height: 0px;
-    font-size: 1.4rem;
-}
+  height: 0px;
+  font-size: 1.4rem; }
 
 #horizontal-nav ul li a span {
-    position: relative;
-}
+  position: relative; }
 
 #horizontal-nav .dropdown-menu span i {
-    line-height: 65px;
-}
+  line-height: 65px; }
 
 .dropdown-horizontal-list li a {
-    min-width: 150px;
-    text-align: left;
-    font-size: 1.0rem;
-    padding: 10px;
-    font-weight: 400;
-}
+  min-width: 150px;
+  text-align: left;
+  font-size: 1.0rem;
+  padding: 10px;
+  font-weight: 400; }
 
 /*IE Specific CSS */
 @media screen and (min-width: 0\0) and (min-resolution: 72dpi) {
-    #horizontal-nav ul li {
-        min-width: 110px;
-    }
-    #horizontal-nav .dropdown-menu span i {
-        line-height: 0px;
-        position: absolute;
-        top: 10px;
-        right: -20px;
-    }
-}
+  #horizontal-nav ul li {
+    min-width: 110px; }
+  #horizontal-nav .dropdown-menu span i {
+    line-height: 0px;
+    position: absolute;
+    top: 10px;
+    right: -20px; } }
+
+.icon {
+  text-align: center; }
+
+.menu-card a {
+  width: 100%;
+  display: block; }
+  .menu-card a span {
+    display: block;
+    text-align: center; }
+  .menu-card a i {
+    color: white;
+    display: block;
+    width: 100%; }
+
+/*# sourceMappingURL=../../../../../../target/dashboard.css.map */

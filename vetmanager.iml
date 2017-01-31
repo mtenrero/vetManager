@@ -41,6 +41,8 @@
     <orderEntry type="library" name="materialize" level="application" />
     <orderEntry type="library" name="com.github.warmuuh:libsass-maven-plugin:0.2.5-libsass_3.3.6" level="project" />
     <orderEntry type="library" name="org.apache.maven.plugins:maven-resources-plugin:3.0.2" level="project" />
+    <orderEntry type="library" name="jquery-3.1.1" level="application" />
+    <orderEntry type="library" name="a0590f821d" level="application" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-mongodb:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.4.3.RELEASE" level="project" />
@@ -102,7 +104,5 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.json:json:20140107" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="jquery-3.1.1" level="application" />
-    <orderEntry type="library" name="a0590f821d" level="application" />
   </component>
 </module>

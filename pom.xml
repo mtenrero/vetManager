@@ -75,7 +75,7 @@
 				</executions>
 				<configuration>
 					<inputPath>${basedir}/src/main/sass</inputPath>
-					<outputPath>src/main/static/resources/styles</outputPath>
+					<outputPath>src/main/resources/public/resources/styles</outputPath>
 					<includePath>${basedir}/src/main/sass/components/</includePath>
 				</configuration>
 			</plugin>
