@@ -63,4 +63,13 @@ body {
     display: block;
     width: 100%; }
 
+.manager-panel {
+  position: fixed;
+  right: 20px;
+  top: 25%;
+  padding: 30px 0; }
+  .manager-panel a {
+    display: block;
+    margin: 10px 0; }
+
 /*# sourceMappingURL=../../../../../../target/dashboard.css.map */
