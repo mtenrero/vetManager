@@ -10,8 +10,8 @@
             APPOINTMENT MANAGER PANEL
 
             <input type="date" class="datepicker">
-            <a class="waves-effect purple lighten-1 waves-light btn"><i class="material-icons right">mode_edit</i>Appointment Today</a>
-            <a class="waves-effect purple waves-light btn"><i class="material-icons right">schedule</i>Another appointment</a>
+            <a class="waves-effect purple lighten-1 waves-light btn" href="#modal_addtoday"><i class="material-icons right">mode_edit</i>Appointment Today</a>
+            <a class="waves-effect purple waves-light btn" href="#modal_addday"><i class="material-icons right">schedule</i>Another appointment</a>
 
         </div>
 
@@ -127,5 +127,6 @@
         </div>
     </div>
 </main>
+{{> partialforms/add_appointment_manager }}
 {{> partials/footer }}
 </body>

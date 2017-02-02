@@ -44,6 +44,8 @@
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
     <orderEntry type="library" name="a0590f821d" level="application" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:1.4.3.RELEASE" level="project" />
+    <orderEntry type="library" name="jquery.dataTables" level="application" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.4.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.3.RELEASE" level="project" />
@@ -105,6 +107,5 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.json:json:20140107" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="jquery.dataTables" level="application" />
   </component>
 </module>

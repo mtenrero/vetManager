@@ -1,5 +1,6 @@
-package es.urjc.etsii.mtenrero;
+package es.urjc.etsii.mtenrero.Controllers;
 
+import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
