@@ -18,6 +18,12 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
+                    <li class="{{#navAppointments}}active{{/navAppointments}}">
+                        <a class="dropdown-menu deep-purple-text" href="/dashboard/appointments">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <span>Appointments<i class="mdi-navigation-arrow-drop-down right"></i></span>
+                        </a>
+                    </li>
                     <li class="{{#navClients}}active{{/navClients}}">
                         <a href="/dashboard/clients" class="deep-purple-text">
                             <i class="fa fa-users"></i>
@@ -30,13 +36,7 @@
                             <span>Pets</span>
                         </a>
                     </li>
-                    <li class="{{#navAppointments}}active{{/navAppointments}}">
-                        <a class="dropdown-menu deep-purple-text" href="/dashboard/appointments">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <span>Appointments<i class="mdi-navigation-arrow-drop-down right"></i></span>
-                        </a>
-                    </li>
-                    <li class="{{#navInventory}}active{{/navInventory}}">
+                                        <li class="{{#navInventory}}active{{/navInventory}}">
                         <a href="/dashboard/inventory" class="deep-purple-text">
                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                             <span>Inventory</span>
