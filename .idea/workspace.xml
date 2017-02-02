@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99903c6-900f-4f83-b37b-ed796f506c8b" name="Default" comment="Improved addPet behaviour&#10;&#10;*Dynamic client selection (existing or new) via JS&#10;*Completed template with example table for filtering clients">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_warmuuh_libsass_maven_plugin_0_2_5_libsass_3_3_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_warmuuh_libsass_maven_plugin_0_2_5_libsass_3_3_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_maven_plugins_maven_resources_plugin_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_maven_plugins_maven_resources_plugin_3_0_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java" afterPath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/settings.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/settings.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_data.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings_data.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="105" lean-forward="false" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
+            <state relative-caret-position="272">
+              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addItem.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addItem.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addItem.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,8 +68,18 @@
       <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addPet.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addPet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="63" column="68" lean-forward="false" selection-start-line="63" selection-start-column="68" selection-end-line="63" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -94,16 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="75" lean-forward="false" selection-start-line="0" selection-start-column="75" selection-end-line="0" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="injections.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/injections.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -198,14 +194,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_data.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/pet_data.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/settings.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/addClient.html" />
         <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/inventory-data.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/addItem.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/inventory_data.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partials/inventory_table.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/settings.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addItem.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" />
       </list>
     </option>
@@ -939,7 +935,7 @@
       <workItem from="1485699996880" duration="798000" />
       <workItem from="1485865365438" duration="4689000" />
       <workItem from="1485882337659" duration="8491000" />
-      <workItem from="1486045558434" duration="13381000" />
+      <workItem from="1486045558434" duration="13493000" />
     </task>
     <task id="LOCAL-00001" summary="Added Index base design &amp; defined structure and partials">
       <created>1485481394876</created>
@@ -1011,11 +1007,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485890877480</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Improved addPet behaviour&#10;&#10;*Dynamic client selection (existing or new) via JS&#10;*Completed template with example table for filtering clients">
+      <created>1486063311283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1486063311283</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70079000" />
+    <option name="totallyTimeSpent" value="70191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1044,7 +1047,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.49676377" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1284,6 +1287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,14 +1394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addPet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="63" column="68" lean-forward="false" selection-start-line="63" selection-start-column="68" selection-end-line="63" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1480,22 +1476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="105" lean-forward="false" selection-start-line="4" selection-start-column="105" selection-end-line="4" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1512,10 +1492,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addPet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="63" column="68" lean-forward="false" selection-start-line="63" selection-start-column="68" selection-end-line="63" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addItem.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
       </provider>
