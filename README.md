@@ -1,6 +1,10 @@
 VetManager®: Cloud Veterinary Management
 ===================
 
+----------
+
+![Development build status](http://52.232.105.28:8080/buildStatus/icon?job=Build%20development%20branch)
+
 **Welcome to VetManager®!**
 VetManager® is a service which allows you to manage your veterinary practice easily. You can have an ordered storage with all things that matters: clients, pets, inventory, appointments, diagnoses…
 
