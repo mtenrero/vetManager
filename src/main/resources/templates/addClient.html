@@ -1,0 +1,25 @@
+{{> partials/injections }}
+<body>
+{{> partials/navigationDashboard }}
+<main class="main-content">
+    <nav class="grey lighten-2 black-text">
+        <div class="nav-wrapper black-text">
+            <div class="col s12 black-text">
+                <a href="/dashboard/clients" class="breadcrumb black-text">Clients</a>
+                <a href="#!" class="breadcrumb black-text">Add new Client to clients registry</a>
+            </div>
+        </div>
+    </nav>
+        <div class="container">
+        <form class="col s12">
+            {{> partialforms/owner_data }}
+        </form>
+
+    </div>
+
+</main>
+
+{{> partials/footer }}
+<script src="/resources/js/dashboard.js"></script>
+
+</body>

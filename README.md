@@ -83,6 +83,12 @@ Optional features
 
 ----------
 
+How to deploy
+-------------
+
+1. **Compile Sass:** You must execute mvn compile after lauch the Spring application.
+
+----------
 
 Contributors
 -------------

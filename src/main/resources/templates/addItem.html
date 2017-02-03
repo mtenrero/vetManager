@@ -1,0 +1,24 @@
+
+{{> partials/injections }}
+<body>
+{{> partials/navigationDashboard }}
+<main class="main-content">
+    <nav class="grey lighten-2 black-text">
+        <div class="nav-wrapper black-text">
+            <div class="col s12 black-text">
+                <a href="/dashboard/inventory" class="breadcrumb black-text">   <i class="fa fa-5x fa-cart-plus "></i>
+                    Inventory</a>
+                <a href="#!" class="breadcrumb black-text">Add new itent to inventory</a>
+            </div>
+        </div>
+    </nav>
+
+    <form class="col s12">
+        {{> partialforms/inventory_data}}
+    </form>
+
+</main>
+{{> partials/footer }}
+<script src="/resources/js/dashboard.js"></script>
+
+</body>ml>
