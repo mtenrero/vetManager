@@ -14,7 +14,6 @@ public class SettingsController {
     public String getLanding(Model model) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Settings");
         model.addAttribute("navSettings", true);
-
-        return "settings";
+        return "Settings";
     }
 }

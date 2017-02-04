@@ -2,6 +2,7 @@ package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by mtenrero on 03/02/2017.
@@ -14,11 +15,11 @@ public class Pet {
     private String name;
     private String kind;
     @ManyToOne(cascade = CascadeType.ALL)
-    private long breed;
+    private Pet_Breed breed;
     @OneToMany(cascade = CascadeType.ALL)
-    private long weightHistoryID; // Weight Table ID
+    private List<Pet_WeightHistory> weightHistoryID; // Weight Table ID
     @OneToMany(cascade = CascadeType.ALL)
-    private long diagnosesID; // Diagnoses Table ID
+    private List<Pet_Diagnose> diagnosesID; // Diagnoses Table ID
     private Date birthday;
     private String layerColour;
     private String layerType;
@@ -27,21 +28,6 @@ public class Pet {
     private String prev_pathologies;
 
     public Pet() {
-    }
-
-    public Pet(long id, String name, String kind, long breed, long weightHistoryID, long diagnosesID, Date birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
-        this.id = id;
-        this.name = name;
-        this.kind = kind;
-        this.breed = breed;
-        this.weightHistoryID = weightHistoryID;
-        this.diagnosesID = diagnosesID;
-        this.birthday = birthday;
-        this.layerColour = layerColour;
-        this.layerType = layerType;
-        this.sterilised = sterilised;
-        this.agressive = agressive;
-        this.prev_pathologies = prev_pathologies;
     }
 
     public long getId() {
@@ -68,27 +54,27 @@ public class Pet {
         this.kind = kind;
     }
 
-    public long getBreed() {
+    public Pet_Breed getBreed() {
         return breed;
     }
 
-    public void setBreed(long breed) {
+    public void setBreed(Pet_Breed breed) {
         this.breed = breed;
     }
 
-    public long getWeightHistoryID() {
+    public List<Pet_WeightHistory> getWeightHistoryID() {
         return weightHistoryID;
     }
 
-    public void setWeightHistoryID(long weightHistoryID) {
+    public void setWeightHistoryID(List<Pet_WeightHistory> weightHistoryID) {
         this.weightHistoryID = weightHistoryID;
     }
 
-    public long getDiagnosesID() {
+    public List<Pet_Diagnose> getDiagnosesID() {
         return diagnosesID;
     }
 
-    public void setDiagnosesID(long diagnosesID) {
+    public void setDiagnosesID(List<Pet_Diagnose> diagnosesID) {
         this.diagnosesID = diagnosesID;
     }
 

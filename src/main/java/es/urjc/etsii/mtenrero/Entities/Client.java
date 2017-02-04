@@ -2,13 +2,16 @@ package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by mtenrero on 03/02/2017.
  */
+@Entity
 public class Client {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int legalID;
     private String firstName;
@@ -20,23 +23,9 @@ public class Client {
     private String addressZIP;
     private String email;
     @OneToMany(cascade = CascadeType.ALL)
-    private long pets;
+    private List<Pet> pets;
 
     public Client() {
-    }
-
-    public Client(int legalID, String firstName, String lastName, int phone1, int phone2, String addressStreet, String addressCity, String addressZIP, String email, long pets) {
-
-        this.legalID = legalID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phone1 = phone1;
-        this.phone2 = phone2;
-        this.addressStreet = addressStreet;
-        this.addressCity = addressCity;
-        this.addressZIP = addressZIP;
-        this.email = email;
-        this.pets = pets;
     }
 
     public long getId() {
@@ -119,11 +108,11 @@ public class Client {
         this.email = email;
     }
 
-    public long getPets() {
+    public List<Pet> getPets() {
         return pets;
     }
 
-    public void setPets(long pets) {
+    public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
 }
