@@ -22,7 +22,7 @@ public class Client {
     private String addressCity;
     private String addressZIP;
     private String email;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "client")
     private List<Pet> pets;
 
     public Client() {

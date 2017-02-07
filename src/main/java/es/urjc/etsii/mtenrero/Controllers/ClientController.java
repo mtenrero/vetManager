@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.PostConstruct;
 
@@ -29,6 +30,7 @@ public class ClientController {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
 
         model.addAttribute("navClients", true);
+        model.addAttribute("client",clientRepository.findAll(page));
 
         return "clients";
     }
@@ -43,15 +45,16 @@ public class ClientController {
     }
 
     @PostMapping("/dashboard/clients/new")
-    public String saveClient(Model model, @ModelAttribute Client client) {
+    public String saveClient(Model model, @RequestParam int legalID, @RequestParam String firstName, @RequestParam String lastName, @RequestParam int phone1, @RequestParam int phone2, @RequestParam String addressStreet, @RequestParam String addressCity, @RequestParam int addressZIP, @RequestParam String email) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
         model.addAttribute("navClients", true);
-
+        Client client=new Client(legalID,firstName,lastName,phone1,email);
         if (clientRepository.save(client) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Client saved correctly!");
         }
-
+        model.addAttribute("client",clientRepository.findAll());
         return "clients";
     }
+
 }

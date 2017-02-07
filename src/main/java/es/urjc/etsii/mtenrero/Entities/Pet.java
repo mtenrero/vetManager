@@ -26,8 +26,24 @@ public class Pet {
     private boolean sterilised;
     private boolean agressive;
     private String prev_pathologies;
-
+    @ManyToOne
+    private Client client;
     public Pet() {
+    }
+
+    public Pet(long id, String name, String kind) {
+        this.id = id;
+        this.name = name;
+        this.kind = kind;
+
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public long getId() {
