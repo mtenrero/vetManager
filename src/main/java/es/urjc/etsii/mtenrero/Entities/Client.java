@@ -28,6 +28,14 @@ public class Client {
     public Client() {
     }
 
+    public Client(int legalID, String firstName, String lastName, int phone1, String email) {
+        this.legalID = legalID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone1 = phone1;
+        this.email = email;
+    }
+
     public long getId() {
         return id;
     }
