@@ -11,8 +11,9 @@
         </div>
     </nav>
         <div class="container">
-        <form class="col s12">
+        <form class="col s12" method="post" action="/dashboard/clients/new">
             {{> partialforms/owner_data }}
+            <input type="submit" value="Save Client">
         </form>
 
     </div>

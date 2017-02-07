@@ -7,35 +7,51 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.annotation.PostConstruct;
 
-
-/**
- * Created by mtenrero on 28/01/2017.
- */
 @Controller
 public class ClientController {
     @Autowired
-    private ClientRepository repository;
+    private ClientRepository clientRepository;
+
     @PostConstruct
     public void init() {
-        repository.save(new Client(457324402, "Hola aracola","",122, "XXX"));
-        repository.save(new Client(457394402, "Hola caracola","sjsj", 1212, "XXXX"));
+        clientRepository.save(new Client(457324402, "Hola aracola","",122, "XXX"));
+        clientRepository.save(new Client(457394402, "Hola caracola","sjsj", 1212, "XXXX"));
     }
-    @RequestMapping("/dashboard/clients")
+
+    @GetMapping("/dashboard/clients")
     public String getLanding(Model model,Pageable page) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+
         model.addAttribute("navClients", true);
-        model.addAttribute("client",repository.findAll(page));
+
         return "clients";
     }
 
-    @RequestMapping("/dashboard/clients/new")
+    @GetMapping("/dashboard/clients/new")
     public String addClient(Model model) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Add new Client");
+
         model.addAttribute("navClients", true);
+
         return "addClient";
+    }
+
+    @PostMapping("/dashboard/clients/new")
+    public String saveClient(Model model, @ModelAttribute Client client) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("navClients", true);
+
+        if (clientRepository.save(client) != null) {
+            model.addAttribute("savedClient", true);
+            model.addAttribute("toastMessage", "Client saved correctly!");
+        }
+
+        return "clients";
     }
 }
