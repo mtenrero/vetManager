@@ -9,15 +9,15 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_name" type="text" class="validate">
+                        <input id="pet_name" type="text" class="validate" name="petName">
                         <label for="pet_name">Pet name</label>
                     </div>
                     <div class="input-field col s3">
-                        <select title="species">
+                        <select title="species" name="species">
                             <option value="" disabled selected>Choose the species</option>
-                            <option value="1">Dog</option>
-                            <option value="2">Cat</option>
-                            <option value="3">Exotic</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Exotic">Exotic</option>
                         </select>
                         <label>Species</label>
                     </div>
@@ -37,23 +37,23 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_code" type="number" class="validate">
+                        <input id="pet_code" type="number" class="validate" name="petId">
                         <label for="pet_code">Pet ID</label>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s2">
+                    <div class="input-field col s3">
                         <i class="material-icons prefix">today</i>
-                        <input id="pet_birthdate" type="date" class="datepicker">
-                        <label for="pet_birthdate">Birthdate</label>
+                        <input id="pet_birthdate" type="date" class="datepicker" name="petBirthdate">
+                        <label for="pet_birthdate"></label>
                     </div>
                     <div class="input-field col s2">
-                        <input id="pet_layercolour" type="text" class="validate">
+                        <input id="pet_layercolour" type="text" class="validate" name="petLayerColour">
                         <label for="pet_layercolour">Layer colour</label>
                     </div>
-                    <div class="input-field col s2">
-                        <select title="pet_hairtype">
+                    <div class="input-field col s3">
+                        <select title="pet_hairtype" name="petHairType">
                             <option value="" disabled selected>Choose the hair type</option>
                             <option value="long">Long</option>
                             <option value="short">Short</option>
@@ -62,7 +62,7 @@
                         </select>
                         <label>Hair type</label>
                     </div>
-                    <div class="switch">
+                    <div class="switch" name="sterilized">
                         <label>
                             Non sterilized
                             <input type="checkbox">

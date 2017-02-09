@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.PostConstruct;
+import java.util.Optional;
 
 @Controller
 public class ClientController {
@@ -45,10 +46,10 @@ public class ClientController {
     }
 
     @PostMapping("/dashboard/clients/new")
-    public String saveClient(Model model, @RequestParam int legalID, @RequestParam String firstName, @RequestParam String lastName, @RequestParam int phone1, @RequestParam int phone2, @RequestParam String addressStreet, @RequestParam String addressCity, @RequestParam int addressZIP, @RequestParam String email) {
+    public String saveClient(Model model, @RequestParam int legalID, @RequestParam String firstName, @RequestParam String lastName, @RequestParam Optional<Integer> phone1, @RequestParam int phone2, @RequestParam String addressStreet, @RequestParam String addressCity, @RequestParam int addressZIP, @RequestParam String email) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
         model.addAttribute("navClients", true);
-        Client client=new Client(legalID,firstName,lastName,phone1,email);
+        Client client=new Client(legalID,firstName,lastName,phone1.get(),email);
         if (clientRepository.save(client) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Client saved correctly!");
