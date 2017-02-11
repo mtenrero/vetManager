@@ -1,7 +1,6 @@
 package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,7 +19,7 @@ public class Client {
     private int phone2;
     private String addressStreet;
     private String addressCity;
-    private String addressZIP;
+    private int addressZIP;
     private String email;
     @OneToMany(mappedBy = "client" , cascade = CascadeType.ALL)
     private List<Pet> pets;
@@ -28,11 +27,14 @@ public class Client {
     public Client() {
     }
 
-    public Client(int legalID, String firstName, String lastName, int phone1, String email) {
+    public Client(int legalID, String firstName, String lastName, int phone1, String addressStreet, String addressCity, int addressZIP, String email) {
         this.legalID = legalID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone1 = phone1;
+        this.addressStreet = addressStreet;
+        this.addressCity = addressCity;
+        this.addressZIP = addressZIP;
         this.email = email;
     }
 
@@ -100,11 +102,11 @@ public class Client {
         this.addressCity = addressCity;
     }
 
-    public String getAddressZIP() {
+    public int getAddressZIP() {
         return addressZIP;
     }
 
-    public void setAddressZIP(String addressZIP) {
+    public void setAddressZIP(int addressZIP) {
         this.addressZIP = addressZIP;
     }
 

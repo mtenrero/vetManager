@@ -11,7 +11,6 @@ public class Pet_Breed {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @OneToMany(mappedBy = "breed")
-    private List<Pet> pet_ID;
+
     private String breed;
 }

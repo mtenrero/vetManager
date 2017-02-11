@@ -20,12 +20,6 @@ public class ClientController {
     @Autowired
     private ClientRepository clientRepository;
 
-    @PostConstruct
-    public void init() {
-        clientRepository.save(new Client(457324402, "Hola aracola","",122, "XXX"));
-        clientRepository.save(new Client(457394402, "Hola caracola","sjsj", 1212, "XXXX"));
-    }
-
     @GetMapping("/dashboard/clients")
     public String getLanding(Model model,Pageable page) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
@@ -46,10 +40,22 @@ public class ClientController {
     }
 
     @PostMapping("/dashboard/clients/new")
-    public String saveClient(Model model, @RequestParam int legalID, @RequestParam String firstName, @RequestParam String lastName, @RequestParam Optional<Integer> phone1, @RequestParam int phone2, @RequestParam String addressStreet, @RequestParam String addressCity, @RequestParam int addressZIP, @RequestParam String email) {
+    public String saveClient(Model model,
+                             @RequestParam int legalID,
+                             @RequestParam String firstName,
+                             @RequestParam String lastName,
+                             @RequestParam int phone1,
+                             @RequestParam Optional<Integer> phone2,
+                             @RequestParam String addressStreet,
+                             @RequestParam String addressCity,
+                             @RequestParam int addressZIP,
+                             @RequestParam String email) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
         model.addAttribute("navClients", true);
-        Client client=new Client(legalID,firstName,lastName,phone1.get(),email);
+        Client client=new Client(legalID,firstName,lastName,phone1,addressStreet,addressCity,addressZIP,email);
+        if(phone2.isPresent()){
+            client.setPhone2(phone2.get());
+        }
         if (clientRepository.save(client) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Client saved correctly!");
