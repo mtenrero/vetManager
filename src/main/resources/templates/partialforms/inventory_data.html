@@ -5,18 +5,34 @@
             <div class="card-content  black-text">
                 <span class="card-title"><i class="assignmen" aria-hidden="true"></i>  Item data</span>
                 <div class="row">
-                    <select id="slct1" name="slct1" onchange="return populate(this.id,'slct2')">
+                    <select id="slct1" name="slct1">
                         <option value="" disabled selected>Choose the type of the item</option>
-                        <option value="1">Material consultas </option>
-                        <option value="2">Material analitico</option>
+                        <option value="">Material consultas </option>
+                        <option value="Analitic">Material analitico</option>
                         <option value="Vaccine">Vaccine</option>
                     </select>
+                    <div style="visibility: hidden" id="divisionX">
+                        <select id="slct2" name="slct2" multiple>
+                            <option value="" disabled selected>Choose the diseases</option>
+                            <option value="">Material consultas </option>
+                            <option value="Analitic">Material analitico</option>
+                            <option value="Vaccine">Vaccine</option>
+                        </select>
+                    </div>
 
+                    <script>
+                        var selects = document.getElementById("slct1");
+                        var selectedValue = selects.options[selects.selectedIndex].value;
+                        if(selectedValue=="Vaccine"){
+                            document.getElementById("divisionX").style.visibility="visible";
+                        }
+
+                    </script>
 
 
                     <div class="input-field col s3">
                         <i class="material-icons prefix">reorder</i>
-                        <input id="number_boxes" type="number" class="validate">
+                        <input id="number_boxes" type="number" class="validate" >
                         <label for="number_boxes">Number of boxes</label>
                     </div>
 

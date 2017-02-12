@@ -18,7 +18,7 @@ public class InventoryController {
 
         return "inventory";
     }
- @RequestMapping("/dashboard/inventory/new")
+    @RequestMapping("/dashboard/inventory/new")
     public String getAddItem(Model model) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Inventory: New item");
 

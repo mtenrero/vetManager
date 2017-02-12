@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.material.min.css">
 
+
 <body>
 {{> partials/navigationDashboard }}
 <main class="main-content">
@@ -20,7 +21,17 @@
         {{> partials/inventory_table }}
     </div>
 </main>
-
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>Rabia</p>
+        <p>Cancer</p>
+        <p>Lesmaniosis</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Save</a>
+    </div>
+</div>
 {{> partials/footer }}
 <script src="/resources/js/datatables.js"></script>
 <script> $(document).ready(function(){

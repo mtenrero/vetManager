@@ -8,20 +8,12 @@
     </thead>
 
     <tbody>
+    {{#pet}}
     <tr>
-        <td>Maya</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Marta Lucas</td>
+        <td>{{name}}</td>
+        <td><div class="chip">{{kind}}</div></td>
+        <td>{{client.firstName}}</td>
     </tr>
-    <tr>
-        <td>Alma</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Juan Manolo</td>
-    </tr>
-    <tr>
-        <td>Tasser</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Alicia Arrivas</td>
-    </tr>
+    {{/pet}}
     </tbody>
 </table>
