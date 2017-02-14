@@ -1,3 +1,5 @@
+@import "../materialize.scss";
+
 body {
   display: flex;
   min-height: 100vh;
@@ -12,6 +14,9 @@ body {
 #ul-horizontal-nav > li > a {
   padding: 0 8px;
   text-align: center;
+}
+#ul-horizontal-nav {
+  line-height: inherit;
 }
 
 
@@ -84,13 +89,27 @@ body {
 
 .manager-panel {
   position: fixed;
-  right: 20px;
-  top: 25%;
+  z-index: 10000;
+  @media #{$medium-and-down} {
+    top: 80px;
 
-  padding: 30px 0;
-  a {
-    display: block;
-    margin: 10px 0;
+    // styles for medium screens and down
   }
 
 }
+
+.main-content {
+  .card {
+    width: 100%;
+  }
+}
+.cells {
+  padding-top: 140px;
+  @media #{$medium-and-down} {
+
+  padding-top: 100px;
+    // styles for medium screens and down
+  }
+
+}
+

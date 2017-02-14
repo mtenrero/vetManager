@@ -59,3 +59,7 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+
+vetmanager\.iml
+
+src/main/resources/public/resources/styles/
