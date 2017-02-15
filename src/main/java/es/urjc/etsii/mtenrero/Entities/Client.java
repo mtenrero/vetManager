@@ -37,14 +37,10 @@ public class Client {
         this.addressZIP = addressZIP;
         this.email = email;
     }
-
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public int getLegalID() {
         return legalID;

@@ -14,7 +14,8 @@ public class Pet {
     private long id; // Chip ID
     private String name;
     private String kind;
-    private String breed;
+    @ManyToOne
+    private Pet_Breed breed;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pet_WeightHistory> weightHistoryID; // Weight Table ID
     @OneToMany(cascade = CascadeType.ALL)
@@ -30,11 +31,18 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(long id, String name, String kind, String breed, String birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
+    public Pet_Breed getBreed() {
+        return breed;
+    }
+
+    public void setBreed(Pet_Breed breed) {
+        this.breed = breed;
+    }
+
+    public Pet(long id, String name, String kind, String birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
         this.id = id;
         this.name = name;
         this.kind = kind;
-        this.breed = breed;
         this.birthday = birthday;
         this.layerColour = layerColour;
         this.layerType = layerType;
@@ -75,14 +83,6 @@ public class Pet {
 
     public void setKind(String kind) {
         this.kind = kind;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
     }
 
     public List<Pet_WeightHistory> getWeightHistoryID() {
