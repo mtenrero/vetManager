@@ -1,29 +1,131 @@
-
 {{> partials/injections }}
+{{> partials/datatablesInject }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.material.min.css">
 <body>
 {{> partials/navigationDashboard }}
 <main class="main-content">
     <nav class="grey lighten-2 black-text">
         <div class="nav-wrapper black-text">
             <div class="col s12 black-text">
-                <a href="/dashboard/inventory" class="breadcrumb black-text">   <i class="fa fa-5x fa-cart-plus "></i>
-                    Inventory</a>
-                <a href="#!" class="breadcrumb black-text">Add new itent to inventory</a>
+                <a href="/dashboard/inventory" class="breadcrumb black-text"> <i class="fa fa-paw"></i>Pets</a>
+                <a href="#!" class="breadcrumb black-text">Add new item</a>
+
             </div>
         </div>
     </nav>
 
-    <form class="col s12">
-        {{> partialforms/inventory_data}}
-        <button class="btn waves-effect waves-light" type="submit" name="action" value="Save Item">Submit
-            <i class="material-icons right">send</i>
-        </button>
-        <br>
-        <br>
-    </form>
+    <div class="container">
+        <form class="col s12" method="post" action="/dashboard/inventory">
+            <div class="card pink lighten-4">
+                <div class="card-content black-text">
+                    <span class="card-title">Add item</span>
+                    <p>
+                    <div class="center-align">
+                        <!-- Switch -->
+                        <div class="switch">
+                            <label>
+                                Vaccine
+                                <input id="client_switch" type="checkbox" name="vaccine" placeholder="existingClient">
+                                <span class="lever"></span>
+                                Clinic material
+                            </label>
+                        </div>
+                    </div>
+                    <div id="existingClient">
+                        <div row>
+                            <select id="diseases" name="diseases" multiple>
+                                <option value="" disabled selected>Choose the diseases</option>
+                                {{#diseases}}
+                                <option value={{.}}>{{.}}</option>
+                                {{/diseases}}
+                               </select>
+                            <div class="input-field col s3">
+                                <i class="material-icons prefix">list</i>
+                                <input id="caducity" type="number" class="validate" name="caducity">
+                                <label for="caducity">Caducity</label>
+                            </div>
+                            <div class="input-field col s3 m4 l3">
+                                <select id="species" name="species">
+                                    <option value="" disabled selected>Species</option>
+                                    <option value="Dog">Dog </option>
+                                    <option value="Cat">Cat</option>
+                                    <option value="Exotic">Exotic</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    {{> partialforms/inventory_data }}
+
+                </div>
+
+            </div>
+            <button class="btn waves-effect waves-light pink" type="submit" name="action" value="Save Item">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <br>
+            <br>
+        </form>
+    </div>
+
 
 </main>
-{{> partials/footer }}
-<script src="/resources/js/dashboard.js"></script>
 
-</body>ml>
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>Rabia</p>
+        <p>Cancer</p>
+        <p>Lesmaniosis</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Save</a>
+    </div>
+</div>
+{{> partials/footer }}
+<script src="/resources/js/datatables.js"></script>
+<script> $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+});
+
+$('.modal').modal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 200, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
+        ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+            alert("Ready");
+            console.log(modal, trigger);
+        },
+        complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+);
+</script>
+<script>
+    $(document).ready(function() {
+
+        $("#newClient").hide();
+
+        $("#client_switch").change(function () {
+            if($('#client_switch').is(":checked")) {
+                $("#existingClient").hide();
+                $("#newClient").show();
+            } else {
+                $("#existingClient").show();
+                $("#newClient").hide();
+
+            }
+        });
+
+    });
+
+
+
+
+</script>
+</body>

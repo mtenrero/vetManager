@@ -19,6 +19,15 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
+    {{#toastMessage}}
+    <script>
+      $(document).ready(function() {
+        Materialize.toast('{{toastMessage}}', 4000);
+      });
+    </script>
+    {{/toastMessage}}
+
+
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://use.fontawesome.com/a0590f821d.js"></script>

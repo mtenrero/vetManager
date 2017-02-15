@@ -63,3 +63,5 @@ fabric.properties
 vetmanager\.iml
 
 src/main/resources/public/resources/styles/
+
+\.idea/webContexts\.xml

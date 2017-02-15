@@ -89,7 +89,7 @@ body {
 
 .manager-panel {
   position: fixed;
-  z-index: 10000;
+  z-index: 1;
   @media #{$medium-and-down} {
     top: 80px;
 
@@ -104,6 +104,9 @@ body {
   }
 }
 .cells {
+
+  position: relative;
+  z-index: -10;
   padding-top: 140px;
   @media #{$medium-and-down} {
 
