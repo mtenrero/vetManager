@@ -1,7 +1,7 @@
 package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,13 +14,13 @@ public class Pet {
     private long id; // Chip ID
     private String name;
     private String kind;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Pet_Breed breed;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pet_WeightHistory> weightHistoryID; // Weight Table ID
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pet_Diagnose> diagnosesID; // Diagnoses Table ID
-    private Date birthday;
+    private String birthday;
     private String layerColour;
     private String layerType;
     private boolean sterilised;
@@ -31,11 +31,26 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(long id, String name, String kind) {
+    public Pet_Breed getBreed() {
+        return breed;
+    }
+
+    public void setBreed(Pet_Breed breed) {
+        this.breed = breed;
+    }
+
+    public Pet(long id, String name, String kind, String birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
         this.id = id;
         this.name = name;
         this.kind = kind;
-
+        this.birthday = birthday;
+        this.layerColour = layerColour;
+        this.layerType = layerType;
+        this.sterilised = sterilised;
+        this.agressive = agressive;
+        this.prev_pathologies = prev_pathologies;
+        this.weightHistoryID=new ArrayList<>();
+        this.diagnosesID=new ArrayList<>();
     }
 
     public Client getClient() {
@@ -70,14 +85,6 @@ public class Pet {
         this.kind = kind;
     }
 
-    public Pet_Breed getBreed() {
-        return breed;
-    }
-
-    public void setBreed(Pet_Breed breed) {
-        this.breed = breed;
-    }
-
     public List<Pet_WeightHistory> getWeightHistoryID() {
         return weightHistoryID;
     }
@@ -94,11 +101,11 @@ public class Pet {
         this.diagnosesID = diagnosesID;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
