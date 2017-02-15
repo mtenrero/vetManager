@@ -10,25 +10,26 @@
                 <div class="card purple darken-3 z-depth-4 white-text">
                     <span class="card-title">APPOINTMENT MANAGER PANEL</span>
                     <input type="date" class="datepicker">
-                    <a class="waves-effect purple lighten-1 waves-light btn"><i class="material-icons right">mode_edit</i>Appointment Today</a>
-                    <a class="waves-effect purple waves-light btn"><i class="material-icons right">schedule</i>Another appointment</a>
+                    <a class="waves-effect purple lighten-1 waves-light btn" href="#modal_addtoday"><i class="material-icons right">mode_edit</i>Appointment Today</a>
+                    <a class="waves-effect purple lighten-1 waves-light btn"><i class="material-icons right">schedule</i>Another appointment</a>
                 </div>
             </div>
         </div>
         <div class="row cells">
+            {{#Appointment}}
             <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
+                <div class="waves-effect card {{color}}">
                     <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
+                        <span class="card-title">{{pet.name}}</span>
                         <p class="truncate center-align">
                             <b>18:10 - 18:30</b>
                         </p>
                         <br>
                         <div class="chip">
-                            Siberian Husky
+                            {{pet.breed}}
                         </div>
                         <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
+                            Dueño: {{client.name}}
                         </div>
 
                     </div>
@@ -37,187 +38,20 @@
                     </div>
                 </div>
             </div>
+            {{/Appointment}}
             <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
+                <div class="waves-effect card blue">
                     <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
+                        <span class="card-title">nsckdhnshk</span>
                         <p class="truncate center-align">
                             <b>18:10 - 18:30</b>
                         </p>
                         <br>
                         <div class="chip">
-                            Siberian Husky
+                       sxali
                         </div>
                         <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
-                        </div>
-
-                    </div>
-                    <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l3">
-                <div class="waves-effect card teal darken-2">
-                    <div class="card-content white-text center-align">
-                        <span class="card-title">Pancho</span>
-                        <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
-                        </p>
-                        <br>
-                        <div class="chip">
-                            Siberian Husky
-                        </div>
-                        <div class="chip orange lighten-4">
-                            Dueño: Juan Robles
+                            Dueño: jdhh
                         </div>
 
                     </div>

@@ -8,15 +8,15 @@
     <nav class="grey lighten-2 black-text">
         <div class="nav-wrapper black-text">
             <div class="col s12 black-text">
-                <a href="/dashboard/pets" class="breadcrumb black-text"> <i class="fa fa-paw"></i>
-                    Pets</a>
-                <a href="#!" class="breadcrumb black-text">Add new pet to patitent registry</a>
+                <a href="/dashboard/inventory" class="breadcrumb black-text"> <i class="fa fa-paw"></i>Pets</a>
+                <a href="#!" class="breadcrumb black-text">Add new item</a>
+
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <form class="col s12" method="post" action="/dashboard/pets/new">
+        <form class="col s12" method="post" action="/dashboard/inventory">
             <div class="card pink lighten-4">
                 <div class="card-content black-text">
                     <span class="card-title">Add item</span>
@@ -26,7 +26,7 @@
                         <div class="switch">
                             <label>
                                 Vaccine
-                                <input id="client_switch" type="checkbox" name="newClient" placeholder="existingClient">
+                                <input id="client_switch" type="checkbox" name="vaccine" placeholder="existingClient">
                                 <span class="lever"></span>
                                 Clinic material
                             </label>
@@ -36,10 +36,10 @@
                         <div row>
                             <select id="diseases" name="diseases" multiple>
                                 <option value="" disabled selected>Choose the diseases</option>
-                                <option value="">Material consultas </option>
-                                <option value="Analitic">Material analitico</option>
-                                <option value="Vaccine">Vaccine</option>
-                            </select>
+                                {{#diseases}}
+                                <option value={{.}}>{{.}}</option>
+                                {{/diseases}}
+                               </select>
                             <div class="input-field col s3">
                                 <i class="material-icons prefix">list</i>
                                 <input id="caducity" type="number" class="validate" name="caducity">
@@ -48,9 +48,9 @@
                             <div class="input-field col s3 m4 l3">
                                 <select id="species" name="species">
                                     <option value="" disabled selected>Species</option>
-                                    <option value="">Dog </option>
-                                    <option value="Analitic">Cat</option>
-                                    <option value="Vaccine">Exotic</option>
+                                    <option value="Dog">Dog </option>
+                                    <option value="Cat">Cat</option>
+                                    <option value="Exotic">Exotic</option>
                                 </select>
 
                             </div>
@@ -60,11 +60,11 @@
                     {{> partialforms/inventory_data }}
 
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action" value="Save Client">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-            </div>
 
+            </div>
+            <button class="btn waves-effect waves-light pink" type="submit" name="action" value="Save Item">Submit
+                <i class="material-icons right">send</i>
+            </button>
             <br>
             <br>
         </form>

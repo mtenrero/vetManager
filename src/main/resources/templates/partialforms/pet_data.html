@@ -9,11 +9,11 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_name" type="text" class="validate" name="petName">
+                        <input id="pet_name" type="text" class="validate"  required name="petName">
                         <label for="pet_name">Pet name</label>
                     </div>
                     <div class="input-field col s3">
-                        <select title="species" name="species">
+                        <select title="species"  required name="species">
                             <option value="" disabled selected>Choose the species</option>
                             <option value="Dog">Dog</option>
                             <option value="Cat">Cat</option>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="input-field col s3">
                         <i class="material-icons prefix">call_split</i>
-                        <input id="pet_breed" type="text" class="validate" name="pet_breed">
+                        <input id="pet_breed" type="text" required class="validate" name="pet_breed">
                         <label for="pet_breed">Breed</label>
                     </div>
 
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_code" type="number" class="validate" name="petId">
+                        <input id="pet_code" type="number" required class="validate" name="petId">
                         <label for="pet_code">Pet ID</label>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <label for="pet_layercolour">Layer colour</label>
                     </div>
                     <div class="input-field col s3">
-                        <select title="pet_hairtype" name="petHairType">
+                        <select title="pet_hairtype" required name="petHairType">
                             <option value="" disabled selected>Choose the hair type</option>
                             <option value="long">Long</option>
                             <option value="short">Short</option>

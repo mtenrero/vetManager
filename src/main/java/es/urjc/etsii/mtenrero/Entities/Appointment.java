@@ -88,15 +88,15 @@ public class Appointment {
     private String gettingColor(String category){
         switch (this.category){
             case "Query":{
-                return " Brown lighten-3";
+                return "brown darken-4";
             }case "Vaccine":{
-                return " pink lighten-3";
+                return "pink ";
             }case "Review":{
-                return " deep-purple lighten-3";
+                return "deep-purple darken-2";
             }case "Surgery":{
                 return " teal lighten-3";
             }case "Urgency":{
-                return " red ";
+                return " red darken-4";
             }
             default:{
                 return " lime darken-4";

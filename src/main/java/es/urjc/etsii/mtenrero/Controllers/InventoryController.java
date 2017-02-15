@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by mtenrero on 28/01/2017.
@@ -50,23 +51,23 @@ public class InventoryController {
                           @RequestParam String nameItem,
                           @RequestParam String factory,
                           @RequestParam (value = "vaccine",defaultValue = "off")String vaccine,
-                          @RequestParam String diseases,
-                          @RequestParam String caducity,
-                          @RequestParam String species,
+                          @RequestParam (value="diseases",defaultValue = "") String diseases,
+                          @RequestParam Optional<String> caducity,
+                          @RequestParam Optional<String> species,
                           @RequestParam int numberBoxes,@RequestParam int unitBoxes,@RequestParam long priceUnit,
                           @RequestParam String other_information
                           ) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Inventory: New item");
         model.addAttribute("navInventory", true);
-
-        System.out.println(diseases);
         Item item=new Item(nameItem,factory,numberBoxes,priceUnit,other_information);
         if( !vaccine.equals("off")){
             item.setCategory("Clinic Material");
+            item.setDiseases(diseases);
         }else{
-            item.setCaducity(caducity);
-            item.setSpecies(species);
-            item.setCategory("Vaccine "+species);
+            item.setCaducity(caducity.get());
+            item.setSpecies(species.get());
+            item.setCategory("Vaccine "+species.get());
+            item.setDiseases(diseases);
         }
        if(itemRepository.save(item)!=null){
            model.addAttribute("savedClient", true);
