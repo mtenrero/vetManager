@@ -10,6 +10,6 @@ import java.util.List;
  * Created by was12 on 04/02/2017.
  */
 public interface Pet_BreedRepository extends JpaRepository<Pet_Breed, Long> {
-
+    List<Pet_Breed> findByBreed(String breed);
 }
 

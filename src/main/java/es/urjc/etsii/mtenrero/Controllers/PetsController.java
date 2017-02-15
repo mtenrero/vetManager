@@ -1,21 +1,16 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
-import es.urjc.etsii.mtenrero.Entities.Client;
-import es.urjc.etsii.mtenrero.Entities.Pet;
-import es.urjc.etsii.mtenrero.Entities.Pet_Breed;
-import es.urjc.etsii.mtenrero.Entities.Pet_WeightHistory;
+import es.urjc.etsii.mtenrero.Entities.*;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
 import es.urjc.etsii.mtenrero.Repositories.PetRepository;
+import es.urjc.etsii.mtenrero.Repositories.Pet_BreedRepository;
 import es.urjc.etsii.mtenrero.Repositories.Pet_WeightHistoryRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.text.DateFormat;
@@ -34,6 +29,8 @@ public class PetsController {
     private ClientRepository clientRepository;
     @Autowired
     private Pet_WeightHistoryRepository petWeightHistoryRepository;
+    @Autowired
+    private Pet_BreedRepository pet_breedRepository;
 
 
     @PostConstruct
@@ -63,7 +60,8 @@ public class PetsController {
         return "addPet";
     }
     @PostMapping("/dashboard/pets/new")
-    public String savePet(Model model, @RequestParam (value = "newClient",defaultValue = "off")String newClient,
+    public String savePet(Model model,
+                          @RequestParam (value = "newClient",defaultValue = "off")String newClient,
                           //FIND CLIENT
                           @RequestParam String nameClient,
                           @RequestParam String lastNameClient,
@@ -93,21 +91,27 @@ public class PetsController {
                           ){
         model.addAttribute("title", VetmanagerApplication.appName + ": Add new pet");
         model.addAttribute("navPets", true);
-        Pet pet=new Pet(petId,petName,species,pet_breed,petBirthdate,petLayerColour,petHairType,true,false,pet_prevpathologies);
+        List<Pet_Breed> breed=pet_breedRepository.findByBreed(pet_breed);
+        Pet pet=new Pet(petId,petName,species,petBirthdate,petLayerColour,petHairType,true,false,pet_prevpathologies);
         Pet_WeightHistory history=new Pet_WeightHistory();
-
         history.setWeight(pet_weigth.get());
-    petWeightHistoryRepository.save(history);
+        petWeightHistoryRepository.save(history);
         pet.getWeightHistoryID().add(history);
-
         Client client;
-        if(newClient=="off"){//Existing client
+        if(newClient.equals("off")){//Existing client
             client=new Client();
         }else{//New Client
             client= new Client( legalID.get(), firstName, lastName, phone1.get(), addressStreet, addressCity, addressZIP.get(), email);
             if(phone2.isPresent()){
                 client.setPhone2(phone2.get());
             }
+        }
+        if(!breed.isEmpty()){
+            pet.setBreed(breed.get(0));
+        }else{
+            Pet_Breed newBreed=new Pet_Breed();
+            pet_breedRepository.save(newBreed);
+            pet.setBreed(newBreed);
         }
         clientRepository.save(client);
         pet.setClient(client);
@@ -118,4 +122,5 @@ public class PetsController {
         model.addAttribute("pet",petRepository.findAll());
         return "pets";
     }
+
 }
