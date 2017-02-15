@@ -1,8 +1,6 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
-import es.urjc.etsii.mtenrero.Entities.Diseases;
 import es.urjc.etsii.mtenrero.Entities.Item;
-import es.urjc.etsii.mtenrero.Repositories.DiseasesRepository;
 import es.urjc.etsii.mtenrero.Repositories.ItemRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +21,6 @@ public class InventoryController {
 
     @Autowired
     ItemRepository itemRepository;
-    @Autowired
-    DiseasesRepository diseasesRepository;
-
 
     @RequestMapping("/dashboard/inventory")
     public String getLanding(Model model, Pageable page) {
