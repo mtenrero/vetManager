@@ -25,6 +25,10 @@ buildNumber.properties
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+# Maven downloaded libraries
+lib/
+.idea/libraries/
+
 # Gradle:
 .idea/gradle.xml
 .idea/libraries
