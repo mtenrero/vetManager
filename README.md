@@ -140,8 +140,8 @@ Navigation chart
 
 UML
 ---
-![GitHub Logo](/UML.png)
+![UML](/readmeFiles/UML.png)
 
 Entity relationship
 -------------------
-
+![E/R](/readmeFiles/eer.png)
