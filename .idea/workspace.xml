@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b99903c6-900f-4f83-b37b-ed796f506c8b" name="Default" comment="Appointments now with panel to add appointment&#10;&#10;* Panel defaults to current date&#10;* Sticks to the page&#10;">
+    <list default="true" id="b99903c6-900f-4f83-b37b-ed796f506c8b" name="Default" comment="One part of appointments and fixed errors">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vetmanager.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java" afterPath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java" afterPath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java" afterPath="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,60 +33,110 @@
     <favorites_list name="vetManager" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.588853">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AppointmentController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
-                  <caret line="39" column="94" lean-forward="false" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Preference.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#2446#2454#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="add_appointment_manager.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="add_appointment_manager.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Item_view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/Item_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="96" lean-forward="false" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appointment_view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/appointment_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_appointment_manager.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="injections.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/injections.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigationDashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/sass/dashboard.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1635">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/styles/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="6517" column="5" lean-forward="false" selection-start-line="6517" selection-start-column="0" selection-end-line="6517" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pet_view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/Pet_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="owner_view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="85" lean-forward="false" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -144,29 +192,47 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/resources/js/appointment.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/resources/js/dashboard.js" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/Pet_BreedRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepositoryImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/partials/injections.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/AddApointment.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PetRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/AppointmentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/apointment.java" />
+        <option value="$PROJECT_DIR$/vetmanager.iml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/appointmentView.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/itemView.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/clientdashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/clientView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/pet_data.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/inventory_data.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addItem.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addClient.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/item_view.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/petView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet_Breed.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/resources/styles/dashboard.css" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Appointment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partials/inventory_table.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/client_view.html" />
         <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partials/navigation.html" />
-        <option value="$PROJECT_DIR$/src/main/sass/dashboard.scss" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/appointments.html" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html" />
-        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/appointment_view.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pet_view.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/item_view.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/appointment_view.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addPet.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/PetsController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_data.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/Pet_view.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_view.html" />
+        <option value="$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html" />
       </list>
     </option>
   </component>
@@ -216,6 +282,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -412,11 +481,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
+              <option name="myItemId" value="vv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
+              <option name="myItemId" value="vv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -442,11 +511,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
+              <option name="myItemId" value="vv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
+              <option name="myItemId" value="vv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -455,159 +524,17 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtenrero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtenrero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtenrero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtenrero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vetManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.9.1/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="find in path&#9;ACTION&#9;FindInPath&#10;finIn&#9;ACTION&#9;FindInPath&#10;um&#9;FILE&#9;uml://JAVA/es.urjc.etsii.mtenrero.Entities&#10;u&#9;FILE&#9;uml://JAVA/es.urjc.etsii.mtenrero.Entities&#10;uml&#9;ACTION&#9;ShowUmlDiagram&#10;U&#9;FILE&#9;uml://JAVA/es.urjc.etsii.mtenrero.Entities&#10;registry&#9;ACTION&#9;ShowRegistry&#10;clients&#9;FILE&#9;file:///Users/marcostenrero/IdeaProjects/vetManager/src/main/resources/templates/clients.html&#10;appo&#9;FILE&#9;file://C:/Users/Marcos/IdeaProjects/vetManagerGit/src/main/resources/templates/appointments.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java&#10;CONT&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java&#10;appoi&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/partialforms/add_appointment_manager.html&#10;appo&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java&#10;dash&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/sass/dashboard.scss&#10;app&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java&#10;prope&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/application.properties&#10;sett&#9;PSI&#9;JAVA://es.urjc.etsii.mtenrero.Controllers.SettingsController&#10;pref&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java&#10;re&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java&#10;pr&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java&#10;ap&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/appointments.html&#10;prop&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/application.properties&#10;cont&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java&#10;prefe&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java&#10;dashb&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/sass/dashboard.scss&#10;index&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/index.html&#10;UML&#9;PSI&#9;JAVA://com.sun.tools.doclint.Entity#uml&#10;setti&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/partialforms/settings_data.html&#10;client&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/addClient.html&#10;repos&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java&#10;clien&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/clients.html&#10;set&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/partialforms/settings_data.html&#10;nav&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/partials/navigationDashboard.html&#10;materializ&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/sass/materialize.scss&#10;giti&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/.gitignore&#10;inje&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/templates/partials/injections.html&#10;dasj&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/resources/public/resources/js/dashboard.js&#10;scss&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/sass/dashboard.scss&#10;registry&#9;ACTION&#9;ShowRegistry&#10;regis&#9;ACTION&#9;ShowRegistry&#10;regi&#9;ACTION&#9;ShowRegistry&#10;pom&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/pom.xml&#10;wo&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/.idea/workspace.xml&#10;das&#9;FILE&#9;file:///Users/Adrian/Projects/vetManager/src/main/sass/dashboard.scss" />
@@ -635,30 +562,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/AppointmentController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/ClientController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/DashboardController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/PetsController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Appointment.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Item.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet_Breed.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/ClientRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/addPet.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/appointments.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/inventory.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/add_appointment_manager.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_data.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/settings_data.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partials/client_table.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partials/inventory_table.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partials/navigation.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partials/pet_table.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -666,15 +570,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/UML.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/appointment_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/client_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/item_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/Item_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/Pet_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/appointment_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/partialforms/owner_view.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/pet_view.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/readmeFiles/UML.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/readmeFiles/eer.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -682,6 +579,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/UML.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -1069,16 +967,43 @@
       <option name="presentableId" value="Default" />
       <updated>1485300657088</updated>
       <workItem from="1485300659861" duration="1353000" />
-      <workItem from="1485874094311" duration="895000" />
-      <workItem from="1486031039977" duration="40000" />
-      <workItem from="1486031137507" duration="4199000" />
-      <workItem from="1486751765876" duration="2513000" />
-      <workItem from="1487018984900" duration="353000" />
-      <workItem from="1487068034714" duration="84000" />
-      <workItem from="1487083004852" duration="11503000" />
-      <workItem from="1487118989653" duration="9973000" />
-      <workItem from="1487184357721" duration="172000" />
-      <workItem from="1487196449736" duration="7505000" />
+      <workItem from="1485425296312" duration="3305000" />
+      <workItem from="1485447669265" duration="828000" />
+      <workItem from="1485476874719" duration="36580000" />
+      <workItem from="1485699996880" duration="798000" />
+      <workItem from="1485865365438" duration="4689000" />
+      <workItem from="1485882337659" duration="8491000" />
+      <workItem from="1486045558434" duration="15063000" />
+      <workItem from="1486110601295" duration="1539000" />
+      <workItem from="1486117247167" duration="1205000" />
+      <workItem from="1486247148364" duration="1057000" />
+      <workItem from="1486469697206" duration="3262000" />
+      <workItem from="1486473378612" duration="905000" />
+      <workItem from="1486483071632" duration="12085000" />
+      <workItem from="1486537732000" duration="2621000" />
+      <workItem from="1486541552422" duration="1333000" />
+      <workItem from="1486548070998" duration="837000" />
+      <workItem from="1486635034764" duration="4633000" />
+      <workItem from="1486639869047" duration="273000" />
+      <workItem from="1486665850844" duration="1976000" />
+      <workItem from="1486674100777" duration="495000" />
+      <workItem from="1486680638341" duration="84000" />
+      <workItem from="1486809322329" duration="6766000" />
+      <workItem from="1486816860479" duration="11544000" />
+      <workItem from="1486839765543" duration="291000" />
+      <workItem from="1486910039332" duration="8239000" />
+      <workItem from="1486973989043" duration="18976000" />
+      <workItem from="1487001434000" duration="3341000" />
+      <workItem from="1487007550582" duration="4940000" />
+      <workItem from="1487025709848" duration="2024000" />
+      <workItem from="1487060796051" duration="4502000" />
+      <workItem from="1487065801264" duration="310000" />
+      <workItem from="1487067168690" duration="687000" />
+      <workItem from="1487110656063" duration="3219000" />
+      <workItem from="1487114082902" duration="273000" />
+      <workItem from="1487151456415" duration="12384000" />
+      <workItem from="1487176089270" duration="26324000" />
+      <workItem from="1487237873389" duration="1905000" />
     </task>
     <task id="LOCAL-00001" summary="Responsiveness in dashboard fixed">
       <created>1485874900081</created>
@@ -1094,11 +1019,116 @@
       <option name="project" value="LOCAL" />
       <updated>1486036318720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created basic Dashboard Navigation">
+      <created>1485624268361</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1485624268361</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fullfilled Dashboard view">
+      <created>1485627149461</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1485627149461</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added dynamic change active class in navbar">
+      <created>1485631561420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1485631561420</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added all Controllers&#10;&#10;*Basic routing for previously defined paths&#10;*Added dynamic active class in dashboard navbar&#10;*Dynamic Page title based on routes">
+      <created>1485632527923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1485632527924</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Filled some presentations&#10;&#10;*New Client&#10;*New Pet&#10;*Added buttons in Client &amp; Pet presentations">
+      <created>1485637861740</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1485637861740</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added some static resources">
+      <created>1485700192263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1485700192263</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created some static content for clients template&#10;&#10;Added example table&#10;Included datatablesJS to imports in that page&#10;Enabled searching inside table">
+      <created>1485884433747</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1485884433747</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Improved addPet behaviour&#10;&#10;*Dynamic client selection (existing or new) via JS&#10;*Completed template with example table for filtering clients">
+      <created>1485890877480</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1485890877480</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Improved addPet behaviour&#10;&#10;*Dynamic client selection (existing or new) via JS&#10;*Completed template with example table for filtering clients">
+      <created>1486063311283</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1486063311283</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Small added to settings and inventory(1/3)&#10;&#10;&#10;Se añade la pagina de ajustes con dos opciones :&#10;las de las paginas o la de ayuda.&#10;Se añade la tabla para el inventario">
+      <created>1486063588490</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1486063588490</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added inventory_data.html &#10;*Temporary filed">
+      <created>1486112125602</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1486112125602</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Creation of clients by means of the form&#10;*Added to pomp h2 dependencies again for development&#10;*Evolved pets and clients entity for bi-directional relationship&#10;*Evolved pet table to work with the database">
+      <created>1486505594900</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1486505594900</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Edited entities">
+      <created>1487152987340</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1487152987340</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Edited controllers and Repositories">
+      <created>1487155477212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1487155477212</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added a lot of extra content&#10;&#10;Added uml&#10;Added objects view&#10;Fixed problem creating pet with existing user&#10;Edited readme with several sections of phase 2">
+      <created>1487212445372</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1487212445372</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38590000" />
+    <option name="totallyTimeSpent" value="209791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1110,29 +1140,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30397728" sideWeight="0.5038168" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3025568" sideWeight="0.49618322" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375" sideWeight="0.49618322" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32302937" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14674735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.49676377" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.4969651" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32565284" sideWeight="0.4908953" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40245774" sideWeight="0.49676377" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33693972" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.49676377" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34039333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.4969651" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1158,9 +1198,24 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Responsiveness in dashboard fixed" />
-    <MESSAGE value="Appointments now with panel to add appointment&#10;&#10;* Panel defaults to current date&#10;* Sticks to the page&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Appointments now with panel to add appointment&#10;&#10;* Panel defaults to current date&#10;* Sticks to the page&#10;" />
+    <MESSAGE value="Added Materalize Imports in HTML" />
+    <MESSAGE value="Added Index base design &amp; defined structure and partials" />
+    <MESSAGE value="Upgraded project architecture &amp; moved from CDN to Sass&#10;&#10;* We now use the Sass sources to generate our own custom css&#10;* That CSS must be compiled before launch the Spring app with mvn compile&#10;" />
+    <MESSAGE value="Created basic Dashboard Navigation" />
+    <MESSAGE value="Fullfilled Dashboard view" />
+    <MESSAGE value="Added dynamic change active class in navbar" />
+    <MESSAGE value="Added all Controllers&#10;&#10;*Basic routing for previously defined paths&#10;*Added dynamic active class in dashboard navbar&#10;*Dynamic Page title based on routes" />
+    <MESSAGE value="Filled some presentations&#10;&#10;*New Client&#10;*New Pet&#10;*Added buttons in Client &amp; Pet presentations" />
+    <MESSAGE value="Added some static resources" />
+    <MESSAGE value="Created some static content for clients template&#10;&#10;Added example table&#10;Included datatablesJS to imports in that page&#10;Enabled searching inside table" />
+    <MESSAGE value="Improved addPet behaviour&#10;&#10;*Dynamic client selection (existing or new) via JS&#10;*Completed template with example table for filtering clients" />
+    <MESSAGE value="Small added to settings and inventory(1/3)&#10;&#10;&#10;Se añade la pagina de ajustes con dos opciones :&#10;las de las paginas o la de ayuda.&#10;Se añade la tabla para el inventario" />
+    <MESSAGE value="added inventory_data.html &#10;*Temporary filed" />
+    <MESSAGE value="Creation of clients by means of the form&#10;*Added to pomp h2 dependencies again for development&#10;*Evolved pets and clients entity for bi-directional relationship&#10;*Evolved pet table to work with the database" />
+    <MESSAGE value="Edited entities" />
+    <MESSAGE value="Edited controllers and Repositories" />
+    <MESSAGE value="Added a lot of extra content&#10;&#10;Added uml&#10;Added objects view&#10;Fixed problem creating pet with existing user&#10;Edited readme with several sections of phase 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a lot of extra content&#10;&#10;Added uml&#10;Added objects view&#10;Fixed problem creating pet with existing user&#10;Edited readme with several sections of phase 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1180,31 +1235,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/appointments.html">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.2.2/mongodb-driver-core-3.2.2.jar!/com/mongodb/connection/SocketStreamHelper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/js/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/js/appointment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="510">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1214,35 +1248,55 @@
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/injections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sass/dashboard.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1406">
-          <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="1324">
+          <caret line="98" column="88" lean-forward="false" selection-start-line="98" selection-start-column="88" selection-end-line="98" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+    <entry file="uml://SpringLocalModels/module=vetmanager">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>module=vetmanager</OriginalElement>
+          <nodes>
+            <node x="" y="">module=vetmanager</node>
+            <node x="" y="">fileset=vetmanager/Spring Application Context</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.VetmanagerApplication</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.SpringBootApplication</node>
+            <node x="" y="">filePath=C:/Users/was12/IdeaProjects/vv/vetManager-servlet.xml</node>
+            <node x="" y="">fileset=vetmanager/MVC VetManager servlet context</node>
+            <node x="" y="">fileset=vetmanager/VetmanagerApplication</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="408.0" y="70.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1250,52 +1304,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state relative-caret-position="166">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/DashboardController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/js/appointment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="284">
+          <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1309,127 +1353,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/js/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet_Breed.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/VetmanagerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PetRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="117">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/ClientRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="120">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sass/materialize.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="64">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/Pet_BreedRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="-2178">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.9.6.RELEASE/spring-data-mongodb-1.9.6.RELEASE.jar!/org/springframework/data/mongodb/repository/MongoRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="68">
+          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="206">
+          <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepositoryImplementation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/client_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addClient.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/doclint/Entity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="13" />
+    <entry file="uml://JAVA/templates">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>templates</OriginalElement>
+          <nodes>
+            <node x="0.0" y="74.0">templates.partials</node>
+            <node x="0.0" y="0.0">templates.partialforms</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="72.0" y="52.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="67">
+          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Pet_WeightHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="97" lean-forward="false" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="223">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1451,87 +1487,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sass/dashboard.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="341">
+          <caret line="42" column="118" lean-forward="false" selection-start-line="42" selection-start-column="118" selection-end-line="42" selection-end-column="118" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Repositories/PreferenceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-          <folding />
+        <state relative-caret-position="301">
+          <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/injections.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/diagram.png" />
+    <entry file="file://$PROJECT_DIR$/diagram.jpg" />
+    <entry file="file://$PROJECT_DIR$/UML.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/es.urjc.etsii.mtenrero.Entities">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>es.urjc.etsii.mtenrero.Entities</OriginalElement>
+          <nodes>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Client</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Pet_Breed</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Pet_WeightHistory</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Pet_Diagnose</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Item</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Pet</node>
+            <node x="" y="">es.urjc.etsii.mtenrero.Entities.Appointment</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.3300395256916996" x="-105.0" y="717.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="714">
+          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/InventoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1274#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="41" column="26" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="41" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/clients.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Appointment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2363">
+            <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/appointments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-473">
-          <caret line="116" column="17" lean-forward="true" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+        <state relative-caret-position="680">
+          <caret line="40" column="85" lean-forward="false" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -1556,11 +1617,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Entities/Preference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        <state relative-caret-position="17">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/es/urjc/etsii/mtenrero/Controllers/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding>
-            <element signature="e#2446#2454#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/injections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/partials/navigationDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sass/dashboard.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1635">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/resources/styles/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="6517" column="5" lean-forward="false" selection-start-line="6517" selection-start-column="0" selection-end-line="6517" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
