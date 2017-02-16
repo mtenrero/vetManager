@@ -10,10 +10,13 @@
         <p><div class="row">
 
         <div class="row">
-            <div class="input-field col s3">
+            <div class="input-field col s6">
                 <i class="material-icons prefix">label</i>
-                <input id="pet_name" type="text" class="validate" name="hour">
-                <label for="pet_name">Hora</label>
+                <select title="consult" name="consult">
+                    {{#intervals}}
+                        <option>{{.}}</option>
+                    {{/intervals}}
+                </select>
             </div>
             <div class="input-field col s6">
                 <select title="consult" name="consult">

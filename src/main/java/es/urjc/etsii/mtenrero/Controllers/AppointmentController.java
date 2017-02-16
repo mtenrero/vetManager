@@ -7,13 +7,16 @@ import es.urjc.etsii.mtenrero.Entities.Pet_Breed;
 import es.urjc.etsii.mtenrero.Repositories.AppointmentRepository;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
 import es.urjc.etsii.mtenrero.Repositories.PetRepository;
+import es.urjc.etsii.mtenrero.Repositories.PreferenceRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by mtenrero on 28/01/2017.
@@ -25,12 +28,16 @@ public class AppointmentController {
     @Autowired
     AppointmentRepository appointmentRepository;
     @Autowired
+    PreferenceRepository preferenceRepository;
+    @Autowired
     ClientRepository clientRepository;
 
     @RequestMapping("/dashboard/appointments")
     public String getLanding(Model model) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Appointments");
         model.addAttribute("navAppointments", true);
+
+        model.addAttribute("intervals",this.preferenceRepository.findAll().get(0).generateWeekdayAppointmentIntervals());
         model.addAttribute("Appointment", appointmentRepository.findAll());
         return "appointments";
     }

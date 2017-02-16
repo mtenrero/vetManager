@@ -63,9 +63,6 @@ public class SettingsController {
                               @RequestParam(defaultValue = "false", required = false) boolean sun
     ) {
         Preference pref = new Preference( maxClientsPerPage, maxPetsPerPage, maxItemsPerPage, minutesPerNormalApointment,  minutesPerVaccineApointment,  openingWeekdayTime,  closingWeekdayTime,  openingWeekendTime,  closingWeekendTime,  mon,  tue,  wed,  thu,  fri, sat,  sun);
-        System.out.print(mon);
-        System.out.print(mon);
-        System.out.print(tue);
         preferenceRepository.deleteAll();
         if (preferenceRepository.save(pref) != null) {
             rm.addFlashAttribute("toastMessage", "Preferences saved correctly!");

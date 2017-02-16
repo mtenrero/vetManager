@@ -1,10 +1,14 @@
 package es.urjc.etsii.mtenrero.Entities;
 
+import org.apache.tomcat.jni.Local;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -57,6 +61,23 @@ public class Preference {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private Date created = new Date();
+
+
+    public ArrayList<String> generateWeekdayAppointmentIntervals() {
+        LocalDateTime openingWeekday = LocalDateTime.of(2016,2,16,this.openingWeekdayTime,0);
+        LocalDateTime closingWeekday = LocalDateTime.of(2016,2,16,this.closingWeekdayTime,0);
+
+        LocalDateTime current = openingWeekday;
+        ArrayList<String> intervals = new ArrayList<String>();
+
+        while (closingWeekday.isAfter(current)) {
+            LocalDateTime plusDuration = current.plusMinutes(this.getMinutesPerNormalApointment());
+            intervals.add(current.getHour()+":"+current.getMinute()+" - "+plusDuration.getHour()+":"+plusDuration.getMinute());
+            current = plusDuration;
+
+        }
+        return intervals;
+    }
 
     public int getMaxPetsPerPage() {
         return maxPetsPerPage;
