@@ -4,24 +4,18 @@
         <th data-field="id">Pet Name</th>
         <th data-field="name">Pet Details</th>
         <th data-field="price">Owner Data</th>
+        <th></th>
     </tr>
     </thead>
 
     <tbody>
+    {{#pet}}
     <tr>
-        <td>Maya</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Marta Lucas</td>
+        <td>{{name}}</td>
+        <td><div class="chip">{{kind}}</div></td>
+        <td>{{client.firstName}}</td>
+        <td> <a href="/dashboard/pet/{{id}}">More information</a></td>
     </tr>
-    <tr>
-        <td>Alma</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Juan Manolo</td>
-    </tr>
-    <tr>
-        <td>Tasser</td>
-        <td><div class="chip">Dog</div></td>
-        <td>Alicia Arrivas</td>
-    </tr>
+    {{/pet}}
     </tbody>
 </table>

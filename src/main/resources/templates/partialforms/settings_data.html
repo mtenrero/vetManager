@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col s12">
         <ul class="tabs">
@@ -7,23 +6,102 @@
         </ul>
     </div>
 
+    <form action="/dashboard/settings/update" method="post">
+
+
     <div id="test1" class="col s12 ">
         <br>
         <br>
         <div class="row">
-        <div class="input-field col s4 m4 l5">
-            <input value="20" id="Num_clients_page" type="number" class="validate" max="50" min="1">
-            <label class="active" for="Num_clients_page">Number of clients for page</label>
-        </div>
-            <div class="input-field col s4 4 l5 ">
-                <input value="20" id="Num_pets_page" type="number" class="validate" max="50" min="1">
-                <label class="active" for="Num_pets_page">Number of pets for page</label>
+            <div class="input-field col s4 m4 l5">
+                <input name="maxClientsPerPage" value="{{preferences.maxClientsPerPage}}" id="maxClientsPerPage" type="number" class="validate" max="50" min="1">
+                <label class="active" for="maxClientsPerPage">Number of clients for page</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="maxPetsPerPage" value="{{preferences.maxPetsPerPage}}" id="maxPetsPerPage" type="number" class="validate" max="50" min="1">
+                <label class="active" for="maxPetsPerPage">Number of pets for page</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="maxItemsPerPage" value="{{preferences.maxItemsPerPage}}" id="maxItemsPerPage" type="number" class="validate" max="50" min="1">
+                <label class="active" for="maxItemsPerPage">Number of pets for page</label>
+            </div>
+            <div class="input-field col s4 m4 l5 ">
+                <input name="minutesPerNormalApointment" value="{{preferences.minutesPerNormalApointment}}" id="minutesPerNormalApointment" type="number" class="validate" max="120" min="1">
+                <label class="active" for="minutesPerNormalApointment">Máxima duración de cita normal (minutos).</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="minutesPerVaccineApointment" value="{{preferences.minutesPerVaccineApointment}}" id="minutesPerVaccineApointment" type="number" class="validate" max="120" min="1">
+                <label class="active" for="minutesPerVaccineApointment">Máxima duración de cita de vacuna (minutos).</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="openingWeekdayTime" value="{{preferences.openingWeekdayTime}}" id="openingWeekdayTime" type="number" class="validate" max="24" min="1">
+                <label class="active" for="openingWeekdayTime">Hora de apertura en días laborales.</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="closingWeekdayTime" value="{{preferences.closingWeekdayTime}}" id="closingWeekdayTime" type="number" class="validate" max="24" min="1">
+                <label class="active" for="closingWeekdayTime">Hora de cierre en días laborales.</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="openingWeekendTime" value="{{preferences.openingWeekendTime}}" id="openingWeekendTime" type="number" class="validate" max="24" min="1">
+                <label class="active" for="openingWeekendTime">Hora de apertura en fines de semana.</label>
+            </div>
+            <div class="input-field col s4 m4 l5">
+                <input name="closingWeekendTime" value="{{preferences.closingWeekendTime}}" id="closingWeekendTime" type="number" class="validate" max="24" min="1">
+                <label class="active" for="closingWeekendTime">Hora de cierre en fines de semana.</label>
+            </div>
+            <div class="col s4 m4 l5">
+                Open days:
+                <div class="switch">
+                    <label>
+                        Monday <br>
+                        <input type="checkbox" name="mon" {{#preferences.mon}}checked{{/preferences.mon}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Tuesday <br>
+                        <input type="checkbox" name="tue" checked>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Wednesday <br>
+                        <input type="checkbox" name="wed" {{#preferences.wed}}checked{{/preferences.wed}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Thursday <br>
+                        <input type="checkbox" name="thu" {{#preferences.thu}}checked{{/preferences.thu}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Friday <br>
+                        <input type="checkbox" name="fri" {{#preferences.fri}}checked{{/preferences.fri}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Saturday <br>
+                        <input type="checkbox" name="sat" {{#preferences.sat}}checked{{/preferences.sat}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
+                <div class="switch">
+                    <label>
+                        Sunday <br>
+                        <input type="checkbox" name="sun" {{#preferences.sun}}checked{{/preferences.sun}}>
+                        <span class="lever"></span>
+                    </label>
+                </div>
             </div>
 
-            <div class="input-field col s4 m4 l5">
-                <input value="20" id="Num_items_page" type="number" class="validate" max="50" min="1">
-                <label class="active" for="Num_items_page">Number of items for page</label>
-            </div>
         </div>
         <div class="row">
             <button class="purple btn waves-effect waves-light " type="submit" name="action">Apply changes
@@ -32,6 +110,7 @@
 
         </div>
     </div>
+    </form>
 
 
     <div id="test2" class="col s12 m12 l10">
@@ -39,19 +118,23 @@
         <ul class="collapsible" data-collapsible="accordion">
             <li>
                 <div class="collapsible-header"><i class="material-icons">filter_drama</i>Clients</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-body"><span>In this page, you can add to your clients with personal data and look for them very quickly and dynamically</span></div>
             </li>
             <li>
                 <div class="collapsible-header"><i class="material-icons">place</i>Pets</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-body"><span>
+On this page you can see all the pets you care, in addition to being able to add new ones to your clients, or create them next to the pet in the same instant</span></div>
             </li>
             <li>
                 <div class="collapsible-header"><i class="material-icons">whatshot</i>Appointment</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-body"><span>
+Add appointments, consult by day and distinguish by color. Each type of query is a color.
+ So for example the vaccination cards are pink or those of a normal consultation are brown</span></div>
             </li>
         </ul>
 
     </div>
+
 </div>
 <br>
 <br>

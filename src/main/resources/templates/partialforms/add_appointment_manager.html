@@ -1,14 +1,58 @@
 <!-- Add Appoint for Today Structure -->
-<div id="modal_addtoday" class="modal modal-fixed-footer">
+<div id="modal_addtoday" class="modal modal-fixed-footer yellow ">
     <div class="modal-content">
-        <h4>Add new Appoint for today</h4>
-        <p>A bunch of text</p>
+        <p>
+                <div class="col s9 m12">
+                    <form method="post" action="/dashboard/appointments">
+                    <div class="card  yellow lighten-1">
+                        <div class="card-content black-text">
+                            <span class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>  APOINTMENT TODAY</span>
+        <p><div class="row">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">label</i>
+                <select title="consult" name="consult">
+                    {{#intervals}}
+                        <option>{{.}}</option>
+                    {{/intervals}}
+                </select>
+            </div>
+            <div class="input-field col s6">
+                <select title="consult" name="consult">
+                    <option value="" disabled selected>Choose the consult</option>
+                    <option value="Query">Query</option>
+                    <option value="Review">Review</option>
+                    <option value="Surgery">Surgery</option>
+                    <option value="Urgency">Urgency</option>
+                    <option value="Vaccine">Vaccine</option>
+                </select>
+                <label>Species</label>
+            </div>
+            <div class="input-field col s4">
+                <i class="material-icons prefix">label</i>
+                <input id="pet_code" type="number" class="validate" name="petId">
+                <label for="pet_code">Pet ID</label>
+            </div>
+
+        </div>
+    </div></p>
+    </div>
+
+</div>
+</div></p>
     </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Save</a>
+
+        <button class="btn waves-effect waves-light yellow black-text " type="submit" name="action" value="Save Client">Submit
+            <i class="material-icons right">send</i>
+        </button>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+            Cancel
+        </a>
     </div>
 </div>
-
+</form>
 <!-- Add Appoint for Custom Day Structure -->
 <div id="modal_addday" class="modal modal-fixed-footer">
     <div class="modal-content">

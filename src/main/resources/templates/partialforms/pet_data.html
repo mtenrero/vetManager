@@ -9,27 +9,27 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_name" type="text" class="validate">
+                        <input id="pet_name" type="text" class="validate"  required name="petName">
                         <label for="pet_name">Pet name</label>
                     </div>
                     <div class="input-field col s3">
-                        <select title="species">
+                        <select title="species"  required name="species">
                             <option value="" disabled selected>Choose the species</option>
-                            <option value="1">Dog</option>
-                            <option value="2">Cat</option>
-                            <option value="3">Exotic</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Exotic">Exotic</option>
                         </select>
                         <label>Species</label>
                     </div>
                     <div class="input-field col s3">
                         <i class="material-icons prefix">call_split</i>
-                        <input id="pet_breed" type="text" class="validate">
+                        <input id="pet_breed" type="text" required class="validate" name="pet_breed">
                         <label for="pet_breed">Breed</label>
                     </div>
 
                     <div class="input-field col s2">
                         <i class="material-icons prefix">play_for_work</i>
-                        <input id="pet_weight" type="number" class="validate">
+                        <input id="pet_weight" type="number" class="validate" name="pet_weigth">
                         <label for="pet_weight">Weight</label>
                     </div>
                 </div>
@@ -37,23 +37,23 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">label</i>
-                        <input id="pet_code" type="number" class="validate">
+                        <input id="pet_code" type="number" required class="validate" name="petId">
                         <label for="pet_code">Pet ID</label>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s2">
+                    <div class="input-field col s3">
                         <i class="material-icons prefix">today</i>
-                        <input id="pet_birthdate" type="date" class="datepicker">
-                        <label for="pet_birthdate">Birthdate</label>
+                        <input id="pet_birthdate" type="date" class="datepicker" name="petBirthdate">
+                        <label for="pet_birthdate"></label>
                     </div>
                     <div class="input-field col s2">
-                        <input id="pet_layercolour" type="text" class="validate">
+                        <input id="pet_layercolour" type="text" class="validate" name="petLayerColour">
                         <label for="pet_layercolour">Layer colour</label>
                     </div>
-                    <div class="input-field col s2">
-                        <select title="pet_hairtype">
+                    <div class="input-field col s3">
+                        <select title="pet_hairtype" required name="petHairType">
                             <option value="" disabled selected>Choose the hair type</option>
                             <option value="long">Long</option>
                             <option value="short">Short</option>
@@ -62,7 +62,7 @@
                         </select>
                         <label>Hair type</label>
                     </div>
-                    <div class="switch">
+                    <div class="switch" name="sterilized">
                         <label>
                             Non sterilized
                             <input type="checkbox">
@@ -70,10 +70,10 @@
                             Sterilized
                         </label>
                     </div>
-                    <div class="switch">
+                    <div class="switch" name="agressive" >
                         <label>
                             Non agressive
-                            <input type="checkbox">
+                            <input type="checkbox" >
                             <span class="lever"></span>
                             Agressive
                         </label>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="pet_prevpathologies" class="materialize-textarea"></textarea>
+                        <textarea id="pet_prevpathologies" class="materialize-textarea" name="pet_prevpathologies"></textarea>
                         <label for="pet_prevpathologies">Previous pathologies</label>
                     </div>
                 </div>

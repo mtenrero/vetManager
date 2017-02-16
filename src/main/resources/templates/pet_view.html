@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{{> partials/injections }}
+<body>
+{{> partials/navigationDashboard }}
+<main class="main-content">
+    <nav class="grey lighten-2 black-text">
+        <div class="nav-wrapper black-text">
+            <div class="col s12 black-text">
+                <a href="/dashboard/pets" class="breadcrumb black-text"> <i class="fa fa-paw"></i>
+                    Pets</a>
+                <a href="#!" class="breadcrumb black-text">Pet information</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {{> partialforms/Pet_view}}
+
+    </div>
+
+</main>
+
+{{> partials/footer }}
+<script src="/resources/js/dashboard.js"></script>
+<script src="/resources/js/clientManagement.js"></script>
+
+
+</body>

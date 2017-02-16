@@ -13,7 +13,7 @@
     </nav>
 
     <div class="container">
-        <form class="col s12">
+        <form class="col s12" method="post" action="/dashboard/pets/new">
             <div class="card grey lighten-3">
                 <div class="card-content black-text">
                     <span class="card-title">Find a client</span>
@@ -23,7 +23,7 @@
                         <div class="switch">
                             <label>
                                 Existing Client
-                                <input id="client_switch" type="checkbox">
+                                <input id="client_switch" type="checkbox" name="newClient" placeholder="existingClient">
                                 <span class="lever"></span>
                                 New Client
                             </label>
@@ -34,18 +34,18 @@
                             <div class="col s12">
                                 <div class="row">
                                     <div class="input-field col s4">
-                                        <i class="material-icons prefix">picture_in_picture</i>
-                                        <input type="text" id="autocomplete-id" class="autocomplete">
-                                        <label for="autocomplete-id">D.N.I</label>
+                                        <i class="material-icons prefix">picture-in-picture</i>
+                                        <input id="pet_code" type="number" class="validate" name="dni">
+                                        <label for="pet_code">D.N.I</label>
                                     </div>
                                     <div class="input-field col s4">
                                         <i class="material-icons prefix">recent_actors</i>
-                                        <input type="text" id="autocomplete-lastname" class="autocomplete">
+                                        <input type="text" id="autocomplete-lastname" class="autocomplete" name="firstNameClient">
                                         <label for="autocomplete-lastname">Last Name</label>
                                     </div>
                                     <div class="input-field col s4">
                                         <i class="material-icons prefix">dialer_sip</i>
-                                        <input type="text" id="autocomplete-phone" class="autocomplete">
+                                        <input type="text" id="autocomplete-phone" class="autocomplete" name="phoneClient">
                                         <label for="autocomplete-phone">Phone</label>
                                     </div>
                                 </div>
@@ -96,6 +96,11 @@
                 {{> partialforms/owner_data }}
             </div>
             {{> partialforms/pet_data }}
+            <button class="btn waves-effect waves-light " type="submit" name="action" value="Save Client">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <br>
+            <br>
         </form>
     </div>
 

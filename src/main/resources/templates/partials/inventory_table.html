@@ -5,48 +5,20 @@
         <th data-field="category">Category</th>
         <th data-field="quantity">Quantity In Stock</th>
         <th data-field="price">Price(€)</th>
-        <th data-field="price">Diseases</th>
+        <th data-field="info"></th>
     </tr>
     </thead>
-
     <tbody>
+    {{#Item}}
     <tr>
-        <td>Eurican R</td>
-        <td><div class="chip">Vaccine Dog</div></td>
-        <td>50</td>
-        <td>3.99€</td>
+        <td>{{name}}</td>
+        <td><div class="chip">{{category}}</div></td>
+        <td>{{quantity}}</td>
+        <td>{{price}}€</td>
         <td>
-            <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>Rabia</p>
-                    <p>Cancer</p>
-                    <p>Lesmaniosis</p>
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
-            </div>
+            <a href="/dashboard/inventory/{{id}}">More information</a>
         </td>
     </tr>
-    <tr>
-        <td>Purevax RCP</td>
-        <td><div class="chip">Vaccine Cat</div></td>
-        <td>10</td>
-        <td>300.99€</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Gauze</td>
-        <td><div class="chip">Material consultation</div></td>
-        <td>500</td>
-        <td>0.99€</td>
-        <td></td>
-    </tr>
+    {{/Item}}
     </tbody>
 </table>

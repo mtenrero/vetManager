@@ -11,8 +11,13 @@
         </div>
     </nav>
         <div class="container">
-        <form class="col s12">
+        <form class="col s12" method="post" action="/dashboard/clients/new">
             {{> partialforms/owner_data }}
+            <button class="btn waves-effect waves-light black" type="submit" name="action" value="Save Client">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <br>
+            <br>
         </form>
 
     </div>

@@ -5,31 +5,24 @@
         <th data-field="name">Last Name</th>
         <th data-field="price">Phone</th>
         <th data-field="e-mail">E-mail</th>
-        <th data-field="pets">Pets</th>
+        <th data-field="legalId">D.N.I</th>
+        <th></th>
     </tr>
     </thead>
-
     <tbody>
-    <tr>
-        <td>Marta</td>
-        <td>Tenor</td>
-        <td>665784125</td>
-        <td>marta@test.com</td>
-        <td>11804773J</td>
+    {{#client}}
+
+    <tr >
+
+        <td>{{firstName}}</td>
+        <td>{{lastName}}</td>
+        <td>{{phone1}}</td>
+        <td>{{email}}</td>
+        <td>{{legalID}}</td>
+        <td><a href="/dashboard/clients/{{id}}"><label>More Information</label></a></td>
+
     </tr>
-    <tr>
-        <td>Jose</td>
-        <td>Julian</td>
-        <td>+34 123 45 67</td>
-        <td>test@juanjo.com</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>Jose</td>
-        <td>Julian</td>
-        <td>+34 123 45 67</td>
-        <td>test@test.com</td>
-        <td>0</td>
-    </tr>
+
+    {{/client}}
     </tbody>
 </table>

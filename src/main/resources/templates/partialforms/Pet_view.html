@@ -1,0 +1,43 @@
+{{#pets}}
+<!-- OWNER DATA -->
+<div class="row">
+    <div class="col s12 m12">
+        <div class="card blue-grey lighten-3">
+            <div class="card-content black-text">
+                <span class="card-title">Pet data</span>
+                <p><div class="row">
+                <div class="row" >
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Name{{name}}  </a>
+                    </div>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Kind: {{kind}}</a>
+                    </div><div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Pet id: {{id}}</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"></i> Breed: {{breed.breed}}</a>
+                    </div>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Client name : {{client.firstName}}</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>  Birthday: {{birthday}}</a>
+                    </div>
+                </div>
+                <div class=" col s6">
+                    <a class="black-text"><i class="material-icons black-text"  ></i>  Layer Colour: {{layerColour}}</a>
+                </div>
+                <div class=" col s6">
+                    <a class="black-text"><i class="material-icons black-text"  ></i>Layer type: {{layerType}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{{/pets}}
