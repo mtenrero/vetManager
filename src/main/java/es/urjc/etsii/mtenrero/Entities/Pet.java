@@ -28,6 +28,7 @@ public class Pet {
     private String prev_pathologies;
     @ManyToOne
     private Client client;
+    private String stade;
     public Pet() {
     }
 
@@ -49,6 +50,7 @@ public class Pet {
         this.sterilised = sterilised;
         this.agressive = agressive;
         this.prev_pathologies = prev_pathologies;
+        this.stade="Alive";
         this.weightHistoryID=new ArrayList<>();
         this.diagnosesID=new ArrayList<>();
     }

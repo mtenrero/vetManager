@@ -1,0 +1,28 @@
+</html>{{> partials/injections }}
+<body>
+{{> partials/navigationDashboard }}
+<main class="main-content">
+    <nav class="grey lighten-2 black-text">
+        <div class="nav-wrapper black-text">
+            <div class="col s12 black-text">
+                <a href="/dashboard/inventory" class="breadcrumb black-text"> <i class="fa fa-cart-plus"></i>
+                    Inventory</a>
+                <a href="#!" class="breadcrumb black-text">Inventory data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {{> partialforms/item_view}}
+
+    </div>
+
+</main>
+
+{{> partials/footer }}
+<script src="/resources/js/dashboard.js"></script>
+<script src="/resources/js/clientManagement.js"></script>
+
+
+</body>

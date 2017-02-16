@@ -4,6 +4,7 @@
         <th data-field="id">Pet Name</th>
         <th data-field="name">Pet Details</th>
         <th data-field="price">Owner Data</th>
+        <th></th>
     </tr>
     </thead>
 
@@ -13,6 +14,7 @@
         <td>{{name}}</td>
         <td><div class="chip">{{kind}}</div></td>
         <td>{{client.firstName}}</td>
+        <td> <a href="/dashboard/pet/{{id}}">More information</a></td>
     </tr>
     {{/pet}}
     </tbody>

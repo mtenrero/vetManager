@@ -63,9 +63,7 @@ public class PetsController {
     public String savePet(Model model,
                           @RequestParam (value = "newClient",defaultValue = "off")String newClient,
                           //FIND CLIENT
-                          @RequestParam String nameClient,
-                          @RequestParam String lastNameClient,
-                          @RequestParam String phoneClient,
+                          @RequestParam Optional<Integer> dni,
                           //NEW CLIENT
                           @RequestParam String firstName,
                           @RequestParam String lastName,
@@ -99,21 +97,26 @@ public class PetsController {
         pet.getWeightHistoryID().add(history);
         Client client;
         if(newClient.equals("off")){//Existing client
-            client=new Client();
+            if (dni.isPresent()) {
+                System.out.println(newClient);
+                client=clientRepository.findByLegalID(dni.get());
+            }else{
+                client=new Client();
+            }
         }else{//New Client
             client= new Client( legalID.get(), firstName, lastName, phone1.get(), addressStreet, addressCity, addressZIP.get(), email);
             if(phone2.isPresent()){
                 client.setPhone2(phone2.get());
             }
+            clientRepository.save(client);
         }
         if(!breed.isEmpty()){
             pet.setBreed(breed.get(0));
         }else{
-            Pet_Breed newBreed=new Pet_Breed();
+            Pet_Breed newBreed=new Pet_Breed(pet_breed);
             pet_breedRepository.save(newBreed);
             pet.setBreed(newBreed);
         }
-        clientRepository.save(client);
         pet.setClient(client);
         if( petRepository.save(pet)!=null){
             model.addAttribute("savedClient", false);
@@ -123,4 +126,11 @@ public class PetsController {
         return "pets";
     }
 
+    @GetMapping("/dashboard/pet/{id}")
+    public String getinfo(Model model,@PathVariable long id) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("navClients", true);
+        model.addAttribute("pets",petRepository.findOne(id));
+        return "pet_view";
+    }
 }

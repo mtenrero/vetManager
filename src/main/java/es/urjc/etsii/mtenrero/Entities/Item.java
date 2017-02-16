@@ -1,8 +1,6 @@
 package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by was12 on 06/02/2017.
@@ -11,7 +9,7 @@ import java.util.List;
 public class Item{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     private String name;
     private String factory;
     private int quantity;
@@ -40,7 +38,7 @@ public class Item{
 
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -105,7 +103,7 @@ public class Item{
         this.species = species;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

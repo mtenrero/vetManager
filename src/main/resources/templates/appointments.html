@@ -22,19 +22,19 @@
                     <div class="card-content white-text center-align">
                         <span class="card-title">{{pet.name}}</span>
                         <p class="truncate center-align">
-                            <b>18:10 - 18:30</b>
+                            <b>{{date}}</b>
                         </p>
                         <br>
                         <div class="chip">
-                            {{pet.breed}}
+                        {{breed.breed}}
                         </div>
                         <div class="chip orange lighten-4">
-                            Dueño: {{client.name}}
+                            Dueño:{{client.firstName}}
                         </div>
 
                     </div>
                     <div class="card-action center-align">
-                        <a href="#">Go to consultation</a>
+                        <a href="/dashboard/appointments/{{id}}">Go to consultation</a>
                     </div>
                 </div>
             </div>

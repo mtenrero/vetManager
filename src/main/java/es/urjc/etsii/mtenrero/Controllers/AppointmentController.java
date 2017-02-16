@@ -11,10 +11,7 @@ import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Calendar;
 
@@ -44,15 +41,23 @@ public class AppointmentController {
                                  @RequestParam String consult,
                                  @RequestParam long petId
     ) {
-        System.out.println(hour);
-        System.out.println(consult);
         model.addAttribute("title", VetmanagerApplication.appName + ": Appointments");
         model.addAttribute("navAppointments", true);
         Appointment appointment = new Appointment(hour, petRepository.findById(petId), consult);
+        appointment.setClient(petRepository.findById(petId).getClient());
+        appointment.setBreed(petRepository.findById(petId).getBreed());
         if (appointmentRepository.save(appointment) != null) {
-            System.out.println("Guardado");
+            model.addAttribute("savedClient", true);
+            model.addAttribute("toastMessage", "Appointment saved correctly!");
         }
         model.addAttribute("Appointment", appointmentRepository.findAll());
         return "appointments";
+    }
+    @GetMapping("/dashboard/appointments/{id}")
+    public String getinfo(Model model,@PathVariable long id) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("navClients", true);
+        model.addAttribute("appointments",appointmentRepository.findOne(id));
+        return "appointment_view";
     }
 }

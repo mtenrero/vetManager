@@ -12,6 +12,8 @@ import java.util.Date;
  */
 @Entity
 public class Preference {
+    public Preference() {
+    }
 
     public Preference(int maxClientsPerPage, int maxPetsPerPage, int maxItemsPerPage, int minutesPerNormalApointment, int minutesPerVaccineApointment, int openingWeekdayTime, int closingWeekdayTime, int openingWeekendTime, int closingWeekendTime, boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
         this.maxClientsPerPage = maxClientsPerPage;
@@ -51,7 +53,152 @@ public class Preference {
     private boolean sat;
     private boolean sun;
 
-    @Id private Date created = new Date();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private Date created = new Date();
 
+    public int getMaxPetsPerPage() {
+        return maxPetsPerPage;
+    }
 
+    public void setMaxPetsPerPage(int maxPetsPerPage) {
+        this.maxPetsPerPage = maxPetsPerPage;
+    }
+
+    public int getMaxItemsPerPage() {
+        return maxItemsPerPage;
+    }
+
+    public void setMaxItemsPerPage(int maxItemsPerPage) {
+        this.maxItemsPerPage = maxItemsPerPage;
+    }
+
+    public int getMinutesPerNormalApointment() {
+        return minutesPerNormalApointment;
+    }
+
+    public void setMinutesPerNormalApointment(int minutesPerNormalApointment) {
+        this.minutesPerNormalApointment = minutesPerNormalApointment;
+    }
+
+    public int getMinutesPerVaccineApointment() {
+        return minutesPerVaccineApointment;
+    }
+
+    public void setMinutesPerVaccineApointment(int minutesPerVaccineApointment) {
+        this.minutesPerVaccineApointment = minutesPerVaccineApointment;
+    }
+
+    public int getOpeningWeekdayTime() {
+        return openingWeekdayTime;
+    }
+
+    public void setOpeningWeekdayTime(int openingWeekdayTime) {
+        this.openingWeekdayTime = openingWeekdayTime;
+    }
+
+    public int getClosingWeekdayTime() {
+        return closingWeekdayTime;
+    }
+
+    public void setClosingWeekdayTime(int closingWeekdayTime) {
+        this.closingWeekdayTime = closingWeekdayTime;
+    }
+
+    public int getOpeningWeekendTime() {
+        return openingWeekendTime;
+    }
+
+    public void setOpeningWeekendTime(int openingWeekendTime) {
+        this.openingWeekendTime = openingWeekendTime;
+    }
+
+    public int getClosingWeekendTime() {
+        return closingWeekendTime;
+    }
+
+    public void setClosingWeekendTime(int closingWeekendTime) {
+        this.closingWeekendTime = closingWeekendTime;
+    }
+
+    public boolean isMon() {
+        return mon;
+    }
+
+    public void setMon(boolean mon) {
+        this.mon = mon;
+    }
+
+    public boolean isTue() {
+        return tue;
+    }
+
+    public void setTue(boolean tue) {
+        this.tue = tue;
+    }
+
+    public boolean isWed() {
+        return wed;
+    }
+
+    public void setWed(boolean wed) {
+        this.wed = wed;
+    }
+
+    public boolean isThu() {
+        return thu;
+    }
+
+    public void setThu(boolean thu) {
+        this.thu = thu;
+    }
+
+    public boolean isFri() {
+        return fri;
+    }
+
+    public void setFri(boolean fri) {
+        this.fri = fri;
+    }
+
+    public boolean isSat() {
+        return sat;
+    }
+
+    public void setSat(boolean sat) {
+        this.sat = sat;
+    }
+
+    public boolean isSun() {
+        return sun;
+    }
+
+    public void setSun(boolean sun) {
+        this.sun = sun;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public int getMaxClientsPerPage() {
+        return maxClientsPerPage;
+    }
+
+    public void setMaxClientsPerPage(int maxClientsPerPage) {
+        this.maxClientsPerPage = maxClientsPerPage;
+    }
 }

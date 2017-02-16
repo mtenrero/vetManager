@@ -71,5 +71,11 @@ public class InventoryController {
         model.addAttribute("Item",itemRepository.findAll());
         return "inventory";
     }
-
+    @GetMapping("/dashboard/inventory/{id}")
+    public String getinfo(Model model,@PathVariable long id) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("navClients", true);
+        model.addAttribute("items",itemRepository.findOne(id));
+        return "item_view";
+    }
 }

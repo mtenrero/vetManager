@@ -98,3 +98,50 @@ Contributors
  - Jesús Guitérrez López ([@Was17](https://github.com/Was17))
 
 Our Trello dashboard: https://trello.com/b/d1yQOm1i/dad-development
+
+Fase 2
+===================
+
+
+Page information
+----------------
+**Index:**    Home page of the applicationand only public page. You can access or create a user besides you can consult relevant information about the veterinary clinic.
+
+**Dashboard:**  Main window of the private part with addresses to the four main windows  
+
+**Client:** Page to consult all veterinary clients
+
+**Add client:**  Page to add a new customer
+
+**Client information:** Page for detailed customer information
+ 
+**Pet:**   Page to consult all veterinary pets
+
+**Add Pet:**  Page to add a new pet
+
+**Pet information:**  Page for detailed pet information
+
+**Appointments:**   Window in which you can see the appointments corresponding to a day, with the data of the mascot and owner. The type of visit is characterized by the color of the business card.  
+
+**Appointments information:**  Page showing details of the appointment
+
+**Inventory:**   Page to consult all veterinary items
+
+**Add Item:**  Page to add a new item
+
+**Item information:**  Page for detailed item information
+
+**Settings:**  Page to edit basic settings
+ 
+
+
+Navigation chart
+----------------
+
+UML
+---
+![GitHub Logo](/UML.png)
+
+Entity relationship
+-------------------
+

@@ -49,8 +49,6 @@ public class Appointment {
 
     public void setPet(Pet pet) {
         this.pet = pet;
-        this.setClient(pet.getClient());
-        this.setBreed(pet.getBreed());
     }
 
     public long getId() {

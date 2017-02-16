@@ -19,7 +19,6 @@ public class ClientController {
     @GetMapping("/dashboard/clients")
     public String getLanding(Model model,Pageable page) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
-
         model.addAttribute("navClients", true);
         model.addAttribute("client",clientRepository.findAll(page));
 
@@ -29,9 +28,7 @@ public class ClientController {
     @GetMapping("/dashboard/clients/new")
     public String addClient(Model model) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Add new Client");
-
         model.addAttribute("navClients", true);
-
         return "addClient";
     }
 
@@ -60,5 +57,12 @@ public class ClientController {
         return "clients";
     }
 
+    @GetMapping("/dashboard/clients/{id}")
+    public String getinfo(Model model,@PathVariable long id) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Clients");
+        model.addAttribute("navClients", true);
+        model.addAttribute("clients",clientRepository.findOne(id));
+        return "client_view";
+    }
 
 }

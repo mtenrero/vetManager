@@ -9,4 +9,5 @@ import java.util.List;
  * Created by was12 on 04/02/2017.
  */
 public interface ClientRepository extends JpaRepository<Client, Long> {
+    Client findByLegalID(int legalID);
 }
