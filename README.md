@@ -73,6 +73,7 @@ Optional features
 
 1. **Access based on roles**
 2. **mongoDB for Managers**
+3. **Emailing service functioning**
 
 ----------
 
