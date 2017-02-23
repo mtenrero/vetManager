@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 /**
  * Created by Adrian on 2/14/17.
  */
-public interface PreferenceRepository extends JpaRepository<Preference,Long> {
+public interface PreferenceRepository extends MongoRepository<Preference,Long> {
 
 }

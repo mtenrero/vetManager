@@ -66,6 +66,7 @@ public class SettingsController {
         System.out.print(mon);
         System.out.print(mon);
         System.out.print(tue);
+        preferenceRepository.deleteAll();
         if (preferenceRepository.save(pref) != null) {
             rm.addFlashAttribute("toastMessage", "Preferences saved correctly!");
         }
