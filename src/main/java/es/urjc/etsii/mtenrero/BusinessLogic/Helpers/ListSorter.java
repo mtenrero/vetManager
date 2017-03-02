@@ -12,16 +12,18 @@ public class ListSorter<T> {
     private List<T> originalList;
     private HashMap<T,Integer> counterAid;
     private List<T> newList;
+    private int wordCount;
 
     public ListSorter() {
         newList = new ArrayList<>();
         counterAid = new HashMap<>();
     }
 
-    public ListSorter(List<T> originalList) {
+    public ListSorter(List<T> originalList, int wordCount) {
         this.originalList = originalList;
         newList = new ArrayList<>();
         counterAid = new HashMap<>();
+        this.wordCount = wordCount;
     }
 
     public List<T> sortByOccurrences() {
@@ -49,7 +51,9 @@ public class ListSorter<T> {
     /** Fills the new List with sorted values and without repetitions **/
     private void generateSortedListByOccurrence() {
         for (Map.Entry<T, Integer> entry : counterAid.entrySet()) {
-            newList.add(originalList.get(originalList.indexOf(entry.getKey())));
+            if (entry.getValue() >= wordCount) {
+                newList.add(originalList.get(originalList.indexOf(entry.getKey())));
+            }
         }
     }
 }

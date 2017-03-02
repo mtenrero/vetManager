@@ -3,6 +3,7 @@ package es.urjc.etsii.mtenrero.Repositories;
 import es.urjc.etsii.mtenrero.Entities.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -10,4 +11,12 @@ import java.util.List;
  */
 public interface ClientRepository extends JpaRepository<Client, Long> {
     Client findByLegalID(int legalID);
+
+    Collection<? extends Client> findFirst10ByPhone1(int i);
+
+    Collection<? extends Client> findFirst10ByLastNameContainingIgnoreCase(String word);
+
+    Collection<? extends Client> findFirst10ByFirstNameContainingIgnoreCase(String word);
+
+    Collection<? extends Client> findFirst10ByLegalID(int i);
 }

@@ -23,7 +23,7 @@ public class TestListSorter {
         clients.add(new Client(3,"Sofia","Reyes"));
 
         // Order data
-        ListSorter listSorter = new ListSorter(clients);
+        ListSorter listSorter = new ListSorter(clients, 1);
         List sortedList = listSorter.sortByOccurrences();
 
         // Asserts
@@ -40,7 +40,7 @@ public class TestListSorter {
         clients.add(new Client(3,"Sofia","Reyes"));
 
         // Order data
-        ListSorter listSorter = new ListSorter(clients);
+        ListSorter listSorter = new ListSorter(clients, 1);
         List sortedList = listSorter.sortByOccurrences();
 
         // Asserts
