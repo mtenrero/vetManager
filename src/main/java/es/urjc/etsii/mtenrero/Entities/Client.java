@@ -1,6 +1,9 @@
 package es.urjc.etsii.mtenrero.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -12,8 +15,12 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(unique=true)
+    @NotNull
     private int legalID;
+    @NotNull
     private String firstName;
+    @NotNull
     private String lastName;
     private int phone1;
     private int phone2;
@@ -21,10 +28,17 @@ public class Client {
     private String addressCity;
     private int addressZIP;
     private String email;
+    @JsonIgnore
     @OneToMany(mappedBy = "client" , cascade = CascadeType.ALL)
     private List<Pet> pets;
 
     public Client() {
+    }
+
+    public Client(int legalID, String firstName, String lastName) {
+        this.legalID = legalID;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Client(int legalID, String firstName, String lastName, int phone1, String addressStreet, String addressCity, int addressZIP, String email) {
@@ -120,5 +134,20 @@ public class Client {
 
     public void setPets(List<Pet> pets) {
         this.pets = pets;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.legalID == ((Client) obj).legalID;
+    }
+
+    @Override
+    public String toString() {
+        return this.lastName + ", " + this.firstName;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.legalID;
     }
 }
