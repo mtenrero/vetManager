@@ -16,6 +16,13 @@ The web portal will be designed as responsive, so you or your clients can use it
 
 ----------
 
+Highlight Features
+-------------
+ **IntelliSearch®:** What are you looking for? Just type it! (Name, ID, Last Name, phone…)
+![IntelliSearch](readmeFiles/search.gif)
+
+----------
+
 
 Different access based on roles
 -------------
