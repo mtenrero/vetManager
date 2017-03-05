@@ -25,6 +25,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.formLogin().defaultSuccessUrl("/dashboard/");
         http.formLogin().failureUrl("/");
 
+        // Logout
+        http.logout().logoutUrl("/logout"); http.logout().logoutSuccessUrl("/");
+
         // Public routes
         http.authorizeRequests().antMatchers("/").permitAll();
         http.authorizeRequests().antMatchers("/resources/**").permitAll();
