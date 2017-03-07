@@ -23,8 +23,8 @@ public class TestListSorter {
         clients.add(new Client(3,"Sofia","Reyes"));
 
         // Order data
-        ListSorter listSorter = new ListSorter(clients, 1);
-        List sortedList = listSorter.sortByOccurrences();
+        ListSorter<Client> listSorter = new ListSorter<>(clients, 1);
+        List<Client> sortedList = listSorter.sortByOccurrences();
 
         // Asserts
         Assert.assertArrayEquals(clients.toArray(), sortedList.toArray());
@@ -40,8 +40,8 @@ public class TestListSorter {
         clients.add(new Client(3,"Sofia","Reyes"));
 
         // Order data
-        ListSorter listSorter = new ListSorter(clients, 1);
-        List sortedList = listSorter.sortByOccurrences();
+        ListSorter<Client> listSorter = new ListSorter<>(clients, 1);
+        List<Client> sortedList = listSorter.sortByOccurrences();
 
         // Asserts
         Assert.assertTrue(sortedList.size() == 2);
