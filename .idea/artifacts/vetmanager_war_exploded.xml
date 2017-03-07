@@ -23,6 +23,7 @@
           <element id="library" level="project" name="Maven: org.mongodb:bson:3.2.2" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.9.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.22" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.22" />
@@ -36,6 +37,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web-services:1.4.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.ws:spring-ws-core:2.3.1.RELEASE" />
@@ -46,8 +48,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.40" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:1.4.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:1.4.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
