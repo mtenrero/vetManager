@@ -26,10 +26,15 @@
                         </p>
                         <br>
                         <div class="chip">
-                        {{breed.breed}}
+                            {{#pet.breed}}
+                                {{breed}}
+                            {{/pet.breed}}
                         </div>
                         <div class="chip orange lighten-4">
-                            Dueño:{{client.firstName}}
+                            Dueño:
+                            {{#pet.client}}
+                                {{firstName}}
+                            {{/pet.client}}
                         </div>
 
                     </div>

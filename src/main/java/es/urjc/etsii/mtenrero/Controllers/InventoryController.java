@@ -34,7 +34,7 @@ public class InventoryController {
         model.addAttribute("title", VetmanagerApplication.appName + ": Inventory: New item");
         model.addAttribute("navInventory", true);
         List<String> diseases=new ArrayList<String>();
-        diseases.add("Cancer");
+        diseases.add("Cancer");  diseases.add("Cancer");
         diseases.add("Leishmaniosis");
         diseases.add("Candidiasis");
         model.addAttribute("diseases",diseases);

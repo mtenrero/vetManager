@@ -13,10 +13,6 @@ public class Appointment {
     private String date;
     @ManyToOne
     private Pet pet;
-    @ManyToOne
-    private Client client;
-    @ManyToOne
-    private Pet_Breed breed;
     private String color;
     private String category;
     private String hour;
@@ -59,13 +55,7 @@ public class Appointment {
         this.id = id;
     }
 
-    public Pet_Breed getBreed() {
-        return breed;
-    }
 
-    public void setBreed(Pet_Breed breed) {
-        this.breed = breed;
-    }
 
     public String getCategory() {
         return category;
@@ -75,13 +65,7 @@ public class Appointment {
         this.category = category;
     }
 
-    public Client getClient() {
-        return client;
-    }
 
-    public void setClient(Client client) {
-        this.client = client;
-    }
 
     private String gettingColor(String category){
         switch (this.category){

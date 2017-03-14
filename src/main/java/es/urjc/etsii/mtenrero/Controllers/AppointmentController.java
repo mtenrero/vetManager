@@ -51,8 +51,7 @@ public class AppointmentController {
         model.addAttribute("title", VetmanagerApplication.appName + ": Appointments");
         model.addAttribute("navAppointments", true);
         Appointment appointment = new Appointment(hour, petRepository.findById(petId), consult);
-        appointment.setClient(petRepository.findById(petId).getClient());
-        appointment.setBreed(petRepository.findById(petId).getBreed());
+
         if (appointmentRepository.save(appointment) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Appointment saved correctly!");
