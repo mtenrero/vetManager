@@ -11,8 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    static final String MANAGER = "MANAGER";
-    static final String CLIENT = "CLIENT";
+    public static final String MANAGER = "MANAGER";
+    public static final String CLIENT = "CLIENT";
 
 
     @Override
@@ -22,7 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.formLogin().loginPage("/");
         http.formLogin().usernameParameter("id");
         http.formLogin().passwordParameter("password");
-        http.formLogin().defaultSuccessUrl("/default/");
+        http.formLogin().defaultSuccessUrl("/");
 
         http.formLogin().failureUrl("/");
 
@@ -36,6 +36,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // Dashboard access (Veterinary management)
         http.authorizeRequests().antMatchers("/dashboard/**").hasAnyRole(MANAGER);
 
+        // Client Dashboard access
+        http.authorizeRequests().antMatchers("/clientDashboard/**").hasAnyRole(CLIENT);
+
 
         // Disable CSRF by the moment
         http.csrf().disable();
@@ -46,8 +49,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
         // Users
-        auth.inMemoryAuthentication().withUser("999").password("vetmanager") .roles("MANAGER");
-        auth.inMemoryAuthentication().withUser("1234").password("cliente") .roles("CLIENTE");
+        auth.inMemoryAuthentication().withUser("999").password("vetmanager") .roles(MANAGER);
+        auth.inMemoryAuthentication().withUser("1234").password("cliente") .roles(CLIENT);
 
     }
 }

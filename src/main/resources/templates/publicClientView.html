@@ -1,0 +1,39 @@
+{{> partials/injections }}
+<body>
+<header>
+    {{>  partials/navigation }}
+</header>
+
+<!-- CONTENT -->
+<main class="main-content">
+    <!-- START WRAPPER -->
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m6 l3 menu-card">
+                    <a class="card-panel blue-grey darken-1 waves-effect" href="/dashboard/clients">
+                        <span class="white-text">My personal data</span>
+                        <i class="fa fa-5x fa-users center-align" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col s12 m6 l3 menu-card">
+                    <a class="card-panel blue darken-1 waves-effect" href="/dashboard/pets">
+                        <span class="white-text">My pets</span>
+                        <i class="fa fa-5x fa-paw center-align" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col s12 m6 l3 menu-card">
+                    <a class="card-panel yellow darken-3 waves-effect" href="/dashboard/appointments">
+                        <span class="white-text">View my appointments</span>
+                        <i class="fa fa-5x fa-calendar center-align" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+{{> partials/footer }}
+</body>

@@ -19,6 +19,9 @@ public class LandingController {
         if (request.isUserInRole("MANAGER")) {
             return "redirect:/dashboard";
         }
+        if (request.isUserInRole("CLIENT")) {
+            return "redirect:/clientDashboard";
+        }
         return "index";
     }
 }
