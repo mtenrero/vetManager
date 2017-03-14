@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by Marcos on 26/01/2017.
  */
@@ -12,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LandingController {
 
     @RequestMapping("/")
-    public String getLanding(Model model) {
+    public String getLanding(HttpServletRequest request,Model model) {
         model.addAttribute("title", VetmanagerApplication.appName);
+        if (request.isUserInRole("MANAGER")) {
+            return "redirect:/dashboard";
+        }
         return "index";
     }
 }

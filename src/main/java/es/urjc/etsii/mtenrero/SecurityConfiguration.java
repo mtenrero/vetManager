@@ -22,7 +22,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.formLogin().loginPage("/");
         http.formLogin().usernameParameter("id");
         http.formLogin().passwordParameter("password");
-        http.formLogin().defaultSuccessUrl("/dashboard/");
+        http.formLogin().defaultSuccessUrl("/default/");
+
         http.formLogin().failureUrl("/");
 
         // Logout
@@ -34,6 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         // Dashboard access (Veterinary management)
         http.authorizeRequests().antMatchers("/dashboard/**").hasAnyRole(MANAGER);
+
 
         // Disable CSRF by the moment
         http.csrf().disable();
