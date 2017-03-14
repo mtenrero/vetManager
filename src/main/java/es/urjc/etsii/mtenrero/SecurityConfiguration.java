@@ -1,5 +1,6 @@
 package es.urjc.etsii.mtenrero;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,8 +12,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    public static final String MANAGER = "MANAGER";
-    public static final String CLIENT = "CLIENT";
+    static final String MANAGER = "MANAGER";
+    static final String CLIENT = "CLIENT";
+
+    @Autowired
+    public UserRepositoryAuthenticationProvider authenticationProvider;
 
 
     @Override
@@ -34,10 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/resources/**").permitAll();
 
         // Dashboard access (Veterinary management)
-        http.authorizeRequests().antMatchers("/dashboard/**").hasAnyRole(MANAGER);
-
-        // Client Dashboard access
-        http.authorizeRequests().antMatchers("/clientDashboard/**").hasAnyRole(CLIENT);
+        http.authorizeRequests().antMatchers("/dashboard/**").hasAnyRole("MANAGER");
 
 
         // Disable CSRF by the moment
@@ -47,10 +48,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+        // Database authentication provider
+        auth.authenticationProvider(authenticationProvider);
         // Users
-        auth.inMemoryAuthentication().withUser("999").password("vetmanager") .roles(MANAGER);
-        auth.inMemoryAuthentication().withUser("1234").password("cliente") .roles(CLIENT);
 
     }
 }
