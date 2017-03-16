@@ -79,7 +79,7 @@ public class PetsController {
                           @RequestParam String petName,
                           @RequestParam String species  ,
                           @RequestParam String pet_breed,
-                          @RequestParam Optional<Float> pet_weigth,
+                          @RequestParam(value = "petWeight") Optional<Float> pet_weigth,
                           @RequestParam long petId,
                           @RequestParam String  petBirthdate,
                           @RequestParam String  petLayerColour,
@@ -95,13 +95,15 @@ public class PetsController {
 
         Pet pet = new Pet(petName,species,petBirthdate,petLayerColour,petHairType,true,false,pet_prevpathologies);
         Pet_WeightHistory history = new Pet_WeightHistory();
-        history.setWeight(pet_weigth.get());
+        if (pet_weigth.isPresent()) {
+            history.setWeight(pet_weigth.get());
+        }
         petWeightHistoryRepository.save(history);
         pet.getWeightHistoryID().add(history);
 
         Client client;
 
-        if (newClient.equals("off")) {
+        if (!newClient.equals("off")) {
             client = new Client(legalID.get(),firstName,lastName,phone1.get(),addressStreet,addressCity,addressZIP.get(),email);
             if(phone2.isPresent()){
                 client.setPhone2(phone2.get());
@@ -119,8 +121,12 @@ public class PetsController {
             pet.setBreed(newBreed);
         }
 
+        List<Pet> pets= client.getPets();
+        pets.add(pet);
+        client.setPets(pets);
+//        clientRepository.save(client);
         pet.setClient(client);
-        if( petRepository.save(pet)!=null){
+        if( clientRepository.save(client)!=null){
             model.addAttribute("savedClient", false);
             model.addAttribute("toastMessage", "Pet saved correctly!");
         }
