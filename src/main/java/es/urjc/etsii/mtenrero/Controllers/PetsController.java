@@ -125,7 +125,7 @@ public class PetsController {
         pets.add(pet);
         client.setPets(pets);
 //        clientRepository.save(client);
-        pet.setClient(client);
+        //pet.setClient(client);
         if( clientRepository.save(client)!=null){
             model.addAttribute("savedClient", false);
             model.addAttribute("toastMessage", "Pet saved correctly!");
