@@ -1,0 +1,25 @@
+{{> partials/injections }}
+<body>
+<header>
+    {{>  /partials/navigation }}
+</header>
+
+<!-- CONTENT -->
+<main class="main-content">
+    <!-- START WRAPPER -->
+    <div class="container">
+        <form class="col s12" method="post" action="/clientDashboard/my-data" modelAttribute="client">
+            {{> partialforms/owner_data }}
+            <button class="btn waves-effect waves-light black" type="submit" name="action" value="Save Client">Update
+                <i class="material-icons right">send</i>
+            </button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+</main>
+
+
+{{> partials/footer }}
+</body>
