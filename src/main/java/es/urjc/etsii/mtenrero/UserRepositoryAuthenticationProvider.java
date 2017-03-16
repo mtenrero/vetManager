@@ -1,7 +1,9 @@
 package es.urjc.etsii.mtenrero;
 
+import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.ParseHelper;
 import es.urjc.etsii.mtenrero.Entities.User;
-import es.urjc.etsii.mtenrero.Repositories.UserRepository;
+import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
+import es.urjc.etsii.mtenrero.Repositories.ManagerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -22,10 +24,14 @@ import java.util.List;
 @Component
 public class UserRepositoryAuthenticationProvider implements AuthenticationProvider {
     @Autowired
-    private UserRepository userRepository;
+    private ClientRepository clientRepository;
+    @Autowired
+    private ManagerRepository managerRepository;
     @Override
     public Authentication authenticate(Authentication auth) throws AuthenticationException {
-        User user = userRepository.findByName(auth.getName());
+
+        User user = findUser(auth.getName());
+
         if (user == null) {
             throw new BadCredentialsException("User not found");
         }
@@ -38,12 +44,22 @@ public class UserRepositoryAuthenticationProvider implements AuthenticationProvi
         for (String role : user.getRoles()) {
             roles.add(new SimpleGrantedAuthority(role));
         }
-        return new UsernamePasswordAuthenticationToken(user.getName(), password, roles);
+        return new UsernamePasswordAuthenticationToken(user.getLogon(), password, roles);
     }
 
     @Override
     public boolean supports(Class<?> aClass) {
         return true;
+    }
+
+    private User findUser(String logonName) {
+        User user = managerRepository.findByLogon(logonName);
+
+        if (user == null) {
+            user = clientRepository.findByLogon(logonName);
+        }
+
+        return user;
     }
 
 }

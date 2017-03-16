@@ -2,6 +2,7 @@ package es.urjc.etsii.mtenrero.Entities;
 
 
 
+import org.hibernate.annotations.Cascade;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
@@ -12,57 +13,48 @@ import java.util.List;
 /**
  * Created by was12 on 14/03/2017.
  */
-@Entity
-public class User {
+@MappedSuperclass
+public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String name;
-    private String passwordHash;
+    private long id;
+    @Column(unique=true)
+    private String logon;
+    private String password;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles;
 
     public User() {
+        this.roles = new ArrayList<>();
     }
 
     public User(String name, String password, String... roles) {
-        this.name = name;
-        this.passwordHash = new BCryptPasswordEncoder().encode(password);
+        this.logon = name;
+        this.password = new BCryptPasswordEncoder().encode(password);
         this.roles = new ArrayList<>(Arrays.asList(roles));
     }
 
-
-    //Constructor, getters and setters
-
-    public Long getId() {
-        return id;
+    public String getLogon() {
+        return logon;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setLogon(String logon) {
+        this.logon = logon;
     }
 
     public String getPasswordHash() {
-        return passwordHash;
+        return password;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setPasswordHash(String password) {
+        this.password = new BCryptPasswordEncoder().encode(password);;
+    }
+
+    public void setRoles(String... roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
     }
 
     public List<String> getRoles() {
         return roles;
-    }
-
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
     }
 }

@@ -10,7 +10,10 @@ import java.util.List;
  * Created by mtenrero on 03/02/2017.
  */
 @Entity
-public class Client {
+public class Client extends User {
+
+    public final static String ROLE = "ROLE_CLIENT";
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,12 +36,15 @@ public class Client {
     private List<Pet> pets;
 
     public Client() {
+        super.setRoles(ROLE);
     }
 
     public Client(int legalID, String firstName, String lastName) {
         this.legalID = legalID;
         this.firstName = firstName;
         this.lastName = lastName;
+        super.setRoles(ROLE);
+        super.setLogon(Integer.toString(legalID));
     }
 
     public Client(int legalID, String firstName, String lastName, int phone1, String addressStreet, String addressCity, int addressZIP, String email) {
@@ -50,9 +56,12 @@ public class Client {
         this.addressCity = addressCity;
         this.addressZIP = addressZIP;
         this.email = email;
+        super.setRoles(ROLE);
+        super.setLogon(Integer.toString(legalID));
+        super.setPasswordHash(Integer.toString(phone1));
     }
     public long getId() {
-        return id;
+        return this.id;
     }
 
 
@@ -62,6 +71,7 @@ public class Client {
 
     public void setLegalID(int legalID) {
         this.legalID = legalID;
+        super.setLogon(Integer.toString(legalID));
     }
 
     public String getFirstName() {
@@ -86,6 +96,7 @@ public class Client {
 
     public void setPhone1(int phone1) {
         this.phone1 = phone1;
+        super.setPasswordHash(Integer.toString(phone1));
     }
 
     public int getPhone2() {

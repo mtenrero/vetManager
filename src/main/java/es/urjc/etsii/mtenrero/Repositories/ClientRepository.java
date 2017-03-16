@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by was12 on 04/02/2017.
  */
-public interface ClientRepository extends JpaRepository<Client, Long> {
+public interface ClientRepository extends UserRepository<Client> {
     Client findByLegalID(int legalID);
 
     Collection<? extends Client> findFirst10ByPhone1(int i);
@@ -19,4 +19,6 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
     Collection<? extends Client> findFirst10ByFirstNameContainingIgnoreCase(String word);
 
     Collection<? extends Client> findFirst10ByLegalID(int i);
+
+    Client findByLogon(String logon);
 }
