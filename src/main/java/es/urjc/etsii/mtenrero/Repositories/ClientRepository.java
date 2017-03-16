@@ -21,7 +21,7 @@ public interface ClientRepository extends UserRepository<Client> {
 
     Collection<? extends Client> findFirst10ByLegalID(int i);
 
-    Client findByLogon(String logon);
+
 
     Client findById(long id);
 }

@@ -108,7 +108,7 @@ public class PetsController {
             if(phone2.isPresent()){
                 client.setPhone2(phone2.get());
             }
-            clientRepository.save(client);
+
         } else {
             client = clientRepository.findById((long) clientId);
         }
@@ -121,12 +121,9 @@ public class PetsController {
             pet.setBreed(newBreed);
         }
 
-        List<Pet> pets= client.getPets();
-        pets.add(pet);
-        client.setPets(pets);
 //        clientRepository.save(client);
-        //pet.setClient(client);
-        if( clientRepository.save(client)!=null){
+        pet.setClient(client);
+        if( petRepository.save(pet)!=null){
             model.addAttribute("savedClient", false);
             model.addAttribute("toastMessage", "Pet saved correctly!");
         }

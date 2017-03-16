@@ -1,6 +1,7 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
 
+import es.urjc.etsii.mtenrero.Entities.Manager;
 import es.urjc.etsii.mtenrero.Repositories.ManagerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

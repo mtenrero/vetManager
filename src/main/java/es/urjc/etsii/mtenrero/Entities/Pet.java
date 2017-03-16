@@ -11,6 +11,7 @@ import java.util.List;
 public class Pet {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id; // Chip ID
     private String name;
     private String kind;

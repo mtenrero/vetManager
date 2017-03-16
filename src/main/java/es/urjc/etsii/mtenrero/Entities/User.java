@@ -47,7 +47,7 @@ public abstract class User {
     }
 
     public void setPasswordHash(String password) {
-        this.password = new BCryptPasswordEncoder().encode(password);;
+        this.password = new BCryptPasswordEncoder().encode(password);
     }
 
     public void setRoles(String... roles) {
