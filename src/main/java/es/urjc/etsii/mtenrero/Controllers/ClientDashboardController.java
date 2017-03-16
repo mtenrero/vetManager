@@ -49,7 +49,7 @@ public class ClientDashboardController {
         Client existingClient = clientRepository.findByLegalID(Integer.parseInt(principal.getName()));
 
         existingClient.setFirstName(updatedClient.getFirstName());
-        existingClient.setLastName(updatedClient.getFirstName());
+        existingClient.setLastName(updatedClient.getLastName());
         existingClient.setAddressCity(updatedClient.getAddressCity());
         existingClient.setAddressStreet(updatedClient.getAddressStreet());
         existingClient.setAddressZIP(updatedClient.getAddressZIP());

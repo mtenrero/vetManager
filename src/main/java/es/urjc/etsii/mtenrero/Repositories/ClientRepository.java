@@ -1,5 +1,6 @@
 package es.urjc.etsii.mtenrero.Repositories;
 
+import com.mongodb.gridfs.CLI;
 import es.urjc.etsii.mtenrero.Entities.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -21,4 +22,6 @@ public interface ClientRepository extends UserRepository<Client> {
     Collection<? extends Client> findFirst10ByLegalID(int i);
 
     Client findByLogon(String logon);
+
+    Client findById(long id);
 }

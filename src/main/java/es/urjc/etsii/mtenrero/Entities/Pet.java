@@ -40,8 +40,7 @@ public class Pet {
         this.breed = breed;
     }
 
-    public Pet(long id, String name, String kind, String birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
-        this.id = id;
+    public Pet(String name, String kind, String birthday, String layerColour, String layerType, boolean sterilised, boolean agressive, String prev_pathologies) {
         this.name = name;
         this.kind = kind;
         this.birthday = birthday;

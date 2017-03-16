@@ -9,43 +9,43 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <i class="material-icons prefix">assignment_ind</i>
-                        <input id="dni" type="number" class="validate"  name="legalID" value="{{client.legalID}}">
+                        <input id="dni" type="number" class="validate"  name="legalID" value="{{#client}}{{client.legalID}}{{/client}}">
                         <label for="dni">D.N.I</label>
                     </div>
                     <div class="input-field col s4">
                         <i class="material-icons prefix">phone</i>
-                        <input id="phone" type="number" class="validate"  name="phone1" value="{{client.phone1}}">
+                        <input id="phone" type="number" class="validate"  name="phone1" value="{{#client}}{{client.phone1}}{{/client}}">
                         <label for="phone">Telephone</label>
                     </div>
                     <div class="input-field col s4">
                         <i class="material-icons prefix">phone</i>
-                        <input id="phone2" type="number" class="validate" name="phone2" value="{{client.phone2}}">
+                        <input id="phone2" type="number" class="validate" name="phone2" value="{{#client}}{{client.phone2}}{{/client}}">
                         <label for="phone2">Telephone 2</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">perm_identity</i>
-                        <input id="name" type="text" class="validate"  name="firstName" value="{{client.firstName}}">
+                        <input id="name" type="text" class="validate"  name="firstName" value="{{#client}}{{client.firstName}}{{/client}}">
                         <label for="name">Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="surname" type="text" class="validate"  name="lastName" value="{{client.lastName}}">
+                        <input id="surname" type="text" class="validate"  name="lastName" value="{{#client}}{{client.lastName}}{{/client}}">
                         <label for="surname">Surname</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">location_on</i>
-                        <input id="address" type="text" class="validate"  name="addressStreet" value="{{client.addressStreet}}">
+                        <input id="address" type="text" class="validate"  name="addressStreet" value="{{#client}}{{client.addressStreet}}{{/client}}">
                         <label for="address">Address</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="address_city" type="text" class="validate" name="addressCity" value="{{client.addressCity}}">
+                        <input id="address_city" type="text" class="validate" name="addressCity" value="{{#client}}{{client.addressCity}}{{/client}}">
                         <label for="address_city">City</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="address_zip" type="number" class="validate"  name="addressZIP" value="{{client.addressZIP}}">
+                        <input id="address_zip" type="number" class="validate"  name="addressZIP" value="{{#client}}{{client.addressZIP}}{{/client}}">
                         <label for="address_zip">ZIP Code</label>
                     </div>
 
@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" type="email" class="validate"  name="email" value="{{client.email}}">
+                        <input id="email" type="email" class="validate"  name="email" value="{{#client}}{{client.email}}{{/client}}">
                         <label for="email">Email</label>
                     </div>
                 </div>

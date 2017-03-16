@@ -42,7 +42,7 @@ var fillResults = function (json) {
             "<td>" + json[client].firstName + "</td>" +
             "<td>" + json[client].lastName + "</td>" +
             "<td>Names</td>" +
-            '<td><a id="client' + json[client].id + '" class="waves-effect waves-light btn clientSelector"><i class="material-icons right">done</i>Choose</a></td>' +
+            '<td><a id="client' + json[client].id + '" class="waves-effect waves-light btn clientSelector" clientID=' + json[client].id + '><i class="material-icons right">done</i>Choose</a></td>' +
             "</tr>");
 
     }
@@ -51,12 +51,16 @@ var fillResults = function (json) {
         $("#clientDetails").show(200);
         $("#existingClient").hide(300);
         $("#switcher").hide(200);
+        $("#clientIdInput").val(this.getAttribute("clientID"))
+
+        console.log(this.getAttribute("clientID"));
     });
 
     $("#selectNewClient").click(function () {
         $("#clientDetails").hide(200);
         $("#existingClient").show(300);
         $("#switcher").show(200);
+        $("#clientIdInput").val('');
     });
 };
 

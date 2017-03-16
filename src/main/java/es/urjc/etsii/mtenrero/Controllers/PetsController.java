@@ -66,6 +66,7 @@ public class PetsController {
                           @RequestParam Optional<Integer> dni,
                           //NEW CLIENT
                           @RequestParam String firstName,
+                          @RequestParam(value = "clientIdInput") int clientId,
                           @RequestParam String lastName,
                           @RequestParam Optional<Integer> legalID,
                           @RequestParam Optional<Integer> phone1,
@@ -89,27 +90,27 @@ public class PetsController {
                           ){
         model.addAttribute("title", VetmanagerApplication.appName + ": Add new pet");
         model.addAttribute("navPets", true);
-        List<Pet_Breed> breed=pet_breedRepository.findByBreed(pet_breed);
-        Pet pet=new Pet(petId,petName,species,petBirthdate,petLayerColour,petHairType,true,false,pet_prevpathologies);
-        Pet_WeightHistory history=new Pet_WeightHistory();
+
+        List<Pet_Breed> breed = pet_breedRepository.findByBreed(pet_breed);
+
+        Pet pet = new Pet(petName,species,petBirthdate,petLayerColour,petHairType,true,false,pet_prevpathologies);
+        Pet_WeightHistory history = new Pet_WeightHistory();
         history.setWeight(pet_weigth.get());
         petWeightHistoryRepository.save(history);
         pet.getWeightHistoryID().add(history);
+
         Client client;
-        if(newClient.equals("off")){//Existing client
-            if (dni.isPresent()) {
-                System.out.println(newClient);
-                client=clientRepository.findByLegalID(dni.get());
-            }else{
-                client=new Client();
-            }
-        }else{//New Client
-            client= new Client( legalID.get(), firstName, lastName, phone1.get(), addressStreet, addressCity, addressZIP.get(), email);
+
+        if (newClient.equals("off")) {
+            client = new Client(legalID.get(),firstName,lastName,phone1.get(),addressStreet,addressCity,addressZIP.get(),email);
             if(phone2.isPresent()){
                 client.setPhone2(phone2.get());
             }
             clientRepository.save(client);
+        } else {
+            client = clientRepository.findById((long) clientId);
         }
+
         if(!breed.isEmpty()){
             pet.setBreed(breed.get(0));
         }else{
@@ -117,6 +118,7 @@ public class PetsController {
             pet_breedRepository.save(newBreed);
             pet.setBreed(newBreed);
         }
+
         pet.setClient(client);
         if( petRepository.save(pet)!=null){
             model.addAttribute("savedClient", false);

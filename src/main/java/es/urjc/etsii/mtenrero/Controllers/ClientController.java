@@ -1,8 +1,10 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
+import com.mongodb.gridfs.CLI;
 import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.ListSorter;
 import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.ParseHelper;
 import es.urjc.etsii.mtenrero.Entities.Client;
+import es.urjc.etsii.mtenrero.Entities.Pet;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -92,5 +94,4 @@ public class ClientController {
 
         return new ResponseEntity<> (listSorter.sortByOccurrences(), HttpStatus.OK);
     }
-
 }
