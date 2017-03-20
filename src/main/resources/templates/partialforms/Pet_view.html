@@ -1,92 +1,43 @@
-<!-- Pet Data -->
+{{#pets}}
+<!-- OWNER DATA -->
 <div class="row">
     <div class="col s12 m12">
-        <div class="card light-blue lighten-5">
+        <div class="card blue-grey lighten-3">
             <div class="card-content black-text">
-                <span class="card-title"><i class="fa fa-paw" aria-hidden="true"></i>  Pet data</span>
+                <span class="card-title">Pet data</span>
                 <p><div class="row">
-
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">label</i>
-                        <input id="pet_name" type="text" class="validate"  required name="petName">
-                        <label for="pet_name">Pet name</label>
+                <div class="row" >
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Name{{name}}  </a>
                     </div>
-                    <div class="input-field col s3">
-                        <select title="species"  required name="species">
-                            <option value="" disabled selected>Choose the species</option>
-                            <option value="Dog">Dog</option>
-                            <option value="Cat">Cat</option>
-                            <option value="Exotic">Exotic</option>
-                        </select>
-                        <label>Species</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <i class="material-icons prefix">call_split</i>
-                        <input id="pet_breed" type="text" required class="validate" name="pet_breed">
-                        <label for="pet_breed">Breed</label>
-                    </div>
-
-                    <div class="input-field col s2">
-                        <i class="material-icons prefix">play_for_work</i>
-                        <input id="pet_weight" type="number" class="validate" name="pet_weigth">
-                        <label for="pet_weight">Weight</label>
-                    </div>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Kind: {{kind}}</a>
+                    </div><div class=" col s6">
+                    <a class="black-text"><i class="material-icons black-text"  ></i>Pet id: {{id}}</a>
                 </div>
-
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">label</i>
-                        <input id="pet_code" type="number" required class="validate" name="petId">
-                        <label for="pet_code">Pet ID</label>
-                    </div>
                 </div>
-
                 <div class="row">
-                    <div class="input-field col s3">
-                        <i class="material-icons prefix">today</i>
-                        <input id="pet_birthdate" type="date" class="datepicker" name="petBirthdate">
-                        <label for="pet_birthdate"></label>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"></i> Breed: {{breed.breed}}</a>
                     </div>
-                    <div class="input-field col s2">
-                        <input id="pet_layercolour" type="text" class="validate" name="petLayerColour">
-                        <label for="pet_layercolour">Layer colour</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <select title="pet_hairtype" required name="petHairType">
-                            <option value="" disabled selected>Choose the hair type</option>
-                            <option value="long">Long</option>
-                            <option value="short">Short</option>
-                            <option value="medium">Medium</option>
-                            <option value="hard">Hard</option>
-                        </select>
-                        <label>Hair type</label>
-                    </div>
-                    <div class="switch" name="sterilized">
-                        <label>
-                            Non sterilized
-                            <input type="checkbox">
-                            <span class="lever"></span>
-                            Sterilized
-                        </label>
-                    </div>
-                    <div class="switch" name="agressive" >
-                        <label>
-                            Non agressive
-                            <input type="checkbox" >
-                            <span class="lever"></span>
-                            Agressive
-                        </label>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>Client name : {{client.firstName}}</a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="pet_prevpathologies" class="materialize-textarea" name="pet_prevpathologies"></textarea>
-                        <label for="pet_prevpathologies">Previous pathologies</label>
+                    <div class=" col s6">
+                        <a class="black-text"><i class="material-icons black-text"  ></i>  Birthday: {{birthday}}</a>
                     </div>
                 </div>
-            </div></p>
+                <div class=" col s6">
+                    <a class="black-text"><i class="material-icons black-text"  ></i>  Layer Colour: {{layerColour}}</a>
+                </div>
+                <div class=" col s6">
+                    <a class="black-text"><i class="material-icons black-text"  ></i>Layer type: {{layerType}}</a>
+                </div>
+            </div>
             </div>
         </div>
     </div>
 </div>
+{{/pets}}

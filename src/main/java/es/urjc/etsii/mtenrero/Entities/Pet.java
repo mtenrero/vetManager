@@ -29,8 +29,26 @@ public class Pet {
     private String prev_pathologies;
     @ManyToOne
     private Client client;
+    @OneToMany(mappedBy ="pet")
+    private List<Appointment> appointment;
     private String stade;
     public Pet() {
+    }
+
+    public List<Appointment> getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(List<Appointment> appointment) {
+        this.appointment = appointment;
+    }
+
+    public String getStade() {
+        return stade;
+    }
+
+    public void setStade(String stade) {
+        this.stade = stade;
     }
 
     public Pet_Breed getBreed() {

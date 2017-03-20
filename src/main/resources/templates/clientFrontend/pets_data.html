@@ -1,0 +1,23 @@
+{{> partials/injections }}
+<body>
+<header>
+    {{>  /partials/navigation }}
+</header>
+
+<!-- CONTENT -->
+<main class="main-content">
+    <!-- START WRAPPER -->
+    <div class="container">
+        <form class="col s12" method="post" action="/clientDashboard/my-data" modelAttribute="client">
+            {{> partialforms/Pet_view}}
+            </button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+</main>
+
+
+{{> partials/footer }}
+</body>
