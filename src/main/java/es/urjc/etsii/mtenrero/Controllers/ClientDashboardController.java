@@ -1,6 +1,8 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
+import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.AppointmentMerger;
 import es.urjc.etsii.mtenrero.Entities.Client;
+import es.urjc.etsii.mtenrero.Repositories.AppointmentRepository;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ public class ClientDashboardController {
 
     @Autowired
     ClientRepository clientRepository;
+    @Autowired
+    AppointmentRepository appointmentRepository;
 
     @GetMapping("/clientDashboard")
     public String getLanding(Model model, Pageable page) {
@@ -66,5 +70,26 @@ public class ClientDashboardController {
 
         return "publicClientView";
     }
+
+   @GetMapping("clientDashboard/my-pets")
+    public String getMyPets(Principal principal, Model model) {
+        model.addAttribute("title", VetmanagerApplication.appName);
+        model.addAttribute("navClients", true);
+        model.addAttribute("pets", clientRepository.findByLegalID(Integer.parseInt(principal.getName())).getPets());
+
+        return "clientFrontend/pets_data";
+   }
+
+   @GetMapping("clientDashboard/my-appointments")
+    public String getMyAppointments(Principal principal, Model model) {
+       AppointmentMerger appointmentMerger = new AppointmentMerger(clientRepository);
+       model.addAttribute("title", VetmanagerApplication.appName);
+       model.addAttribute("navClients", true);
+       model.addAttribute("pets", appointmentMerger.getAppointmentsByClient(
+               clientRepository.findByLegalID(Integer.parseInt(principal.getName()))
+       ));
+
+       return "clientFrontend/appointments_data";
+   }
 
 }
