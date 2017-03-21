@@ -3,6 +3,7 @@ package es.urjc.etsii.mtenrero.Controllers;
 import com.mongodb.gridfs.CLI;
 import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.ListSorter;
 import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.ParseHelper;
+import es.urjc.etsii.mtenrero.Comunication;
 import es.urjc.etsii.mtenrero.Entities.Client;
 import es.urjc.etsii.mtenrero.Entities.Pet;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -60,6 +62,11 @@ public class ClientController {
         if (clientRepository.save(client) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Client saved correctly!");
+            try {
+                new Comunication().main(email,"Bienvenido a vetmanager","estas dentro");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         model.addAttribute("client",clientRepository.findAll());
         return "clients";
