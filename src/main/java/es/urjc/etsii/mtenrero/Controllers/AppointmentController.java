@@ -29,8 +29,6 @@ public class AppointmentController {
     AppointmentRepository appointmentRepository;
     @Autowired
     PreferenceRepository preferenceRepository;
-    @Autowired
-    ClientRepository clientRepository;
 
     @RequestMapping("/dashboard/appointments")
     public String getLanding(Model model) {
@@ -59,6 +57,7 @@ public class AppointmentController {
         model.addAttribute("Appointment", appointmentRepository.findAll());
         return "appointments";
     }
+
     @GetMapping("/dashboard/appointments/{id}")
     public String getinfo(Model model,@PathVariable long id) {
         model.addAttribute("title", VetmanagerApplication.appName + ": Clients");

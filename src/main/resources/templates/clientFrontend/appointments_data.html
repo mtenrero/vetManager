@@ -7,7 +7,19 @@
 <!-- CONTENT -->
 <main class="main-content">
     <!-- START WRAPPER -->
+
     <div class="container">
+        <div class="right-pill">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button btn-floating btn-large waves-effect waves-light purple' href='#' data-activates='dropdownAppointment'><i class="material-icons">add</i></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdownAppointment' class='dropdown-content'>
+            {{#pets}}
+                <li><a pet="{{id}}" href="#modal_addAppointment">{{name}} : {{kind}}, {{breed.breed}}</a></li>
+            {{/pets}}
+            </ul>
+        </div>
         <form class="col s12" method="post" action="/clientDashboard/my-data" modelAttribute="client">
             {{> partialforms/appointment_view}}
             <br>
@@ -17,6 +29,8 @@
 
 </main>
 
+{{>partialforms/content_newClientAppointment}}
 
 {{> partials/footer }}
+<script src="/resources/js/clientDashboard.js"></script>
 </body>
