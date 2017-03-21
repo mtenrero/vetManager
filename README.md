@@ -143,6 +143,13 @@ Page information
  Fase 3
 ===================
 
+
+Diagrams
+----------------------
+(readmeFiles/fase3-1.jpeg)
+(readmeFiles/fase3-2.jpeg)
+
+
 Deploying Instructions
 ----------------------
 
