@@ -146,8 +146,8 @@ Page information
 
 Diagrams
 ----------------------
-(readmeFiles/fase3-1.jpeg)
-(readmeFiles/fase3-2.jpeg)
+![Package](readmeFiles/fase3-1.jpeg)
+![UML2](readmeFiles/fase3-2.jpeg)
 
 
 Deploying Instructions
