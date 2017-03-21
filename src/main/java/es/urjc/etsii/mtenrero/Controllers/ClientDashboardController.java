@@ -56,7 +56,7 @@ public class ClientDashboardController {
 
     /** UPDATE CONTROLLERS **/
     @PostMapping("/clientDashboard/my-preferences")
-    public String updateMyPreferences(Principal principal, Model model, @RequestParam("hours") int hours) {
+   public String updateMyPreferences(Principal principal, Model model, @RequestParam("hours") int hours) {
 
         Client existingClient = clientRepository.findByLegalID(Integer.parseInt(principal.getName()));
 

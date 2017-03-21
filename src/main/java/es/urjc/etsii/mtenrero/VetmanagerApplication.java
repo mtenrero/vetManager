@@ -14,6 +14,7 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -30,6 +31,7 @@ public class VetmanagerApplication extends SpringBootServletInitializer {
 	@Autowired
 	static
 	ClientRepository clientRepository;
+
 
     @Autowired
     static
@@ -54,6 +56,12 @@ public class VetmanagerApplication extends SpringBootServletInitializer {
 			    System.out.print("HOOOOLA");
 				List<Appointment> appointments = 			    appointmentRepository.findAll();
 
+				Comunication comunication = new Comunication();
+                try {
+                    comunication.send("","","asd");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 //                for (Appointment appointment : appointments) {
 //                    LocalDate dateBefore;
 //                    LocalDate dateAfter appointment.g;
