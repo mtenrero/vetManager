@@ -140,7 +140,29 @@ Page information
 
 **Settings:**  Page to edit basic settings
  
+ Fase 3
+===================
 
+Deploying Instructions
+----------------------
+
+ 1. Clone repository inside azure service using git
+ `git clone https://github.com/mtenrero/vetManager.git`
+ 2. Compile project by typing the command (Maven must be installed) [Maven Installation instructions for Ubuntu](https://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/)
+ `mvn package`
+ 3. Setup enviroment variables to your desired values: 
+ `PORT=
+DB_HOST=
+DB_USERNAME=
+DB_PASSWORD=
+MONGO_HOST=
+MONGO_PORT=
+MONGO_DOCUMENT=
+MONGO_USERNAME=
+SSL_PASSWORD=`
+
+ 4. Run .jar file located at target/vetmanager-version-SNAPSHOT.jar changing the version for the desired one
+ `java -jar target/vetmanager-<version>-SNAPSHOT.jar`
 
 Navigation chart
 ----------------
