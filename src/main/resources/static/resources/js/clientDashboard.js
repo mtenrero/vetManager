@@ -15,4 +15,22 @@ $(document).ready(function() {
         }
     );
 
+    $('.modal').modal();
+
+    $('.datepicker').pickadate({
+        min: new Date(),
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+
+    var picker = $('.datepicker').pickadate('picker');
+    picker.set('select', new Date());
+
+    $('#dropdownAppointment').find('li a').click(function () {
+        console.log(this.getAttribute('pet'));
+        $('#pet_code').val(this.getAttribute('pet'));
+    });
+
+
+
 });

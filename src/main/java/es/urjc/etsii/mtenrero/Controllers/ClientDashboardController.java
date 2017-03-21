@@ -1,9 +1,12 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
 import es.urjc.etsii.mtenrero.BusinessLogic.Helpers.AppointmentMerger;
+import es.urjc.etsii.mtenrero.Entities.Appointment;
 import es.urjc.etsii.mtenrero.Entities.Client;
 import es.urjc.etsii.mtenrero.Repositories.AppointmentRepository;
 import es.urjc.etsii.mtenrero.Repositories.ClientRepository;
+import es.urjc.etsii.mtenrero.Repositories.PetRepository;
+import es.urjc.etsii.mtenrero.Repositories.PreferenceRepository;
 import es.urjc.etsii.mtenrero.VetmanagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +28,10 @@ public class ClientDashboardController {
     ClientRepository clientRepository;
     @Autowired
     AppointmentRepository appointmentRepository;
+    @Autowired
+    PreferenceRepository preferenceRepository;
+    @Autowired
+    PetRepository petRepository;
 
     @GetMapping("/clientDashboard")
     public String getLanding(Model model, Pageable page) {
@@ -89,8 +96,27 @@ public class ClientDashboardController {
                clientRepository.findByLegalID(Integer.parseInt(principal.getName()))
        ));
        model.addAttribute("pets", clientRepository.findByLegalID(Integer.parseInt(principal.getName())).getPets());
+       model.addAttribute("intervals",this.preferenceRepository.findAll().get(0).generateWeekdayAppointmentIntervals());
 
        return "clientFrontend/appointments_data";
    }
+
+    @PostMapping("/clientDashboard/my-appointments/new")
+    public String addAppointment(Model model,
+                                 @RequestParam String hour,
+                                 @RequestParam String consult,
+                                 @RequestParam long petId
+    ) {
+        model.addAttribute("title", VetmanagerApplication.appName + ": Appointments");
+        model.addAttribute("navAppointments", true);
+        Appointment appointment = new Appointment(hour, petRepository.findById(petId), consult);
+
+        if (appointmentRepository.save(appointment) != null) {
+            model.addAttribute("savedClient", true);
+            model.addAttribute("toastMessage", "Appointment saved correctly!");
+        }
+        model.addAttribute("Appointment", appointmentRepository.findAll());
+        return "clientFrontend/my-appointments";
+    }
 
 }

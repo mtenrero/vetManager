@@ -1,0 +1,50 @@
+<!-- Add Appoint for Today Structure -->
+<div id="modal_addAppointment" class="modal">
+    <form method="post" action="/clientDashboard/my-appointments/new">
+        <div class="modal-content">
+            <h4>New appointment</h4>
+            <!-- Injected Pet ID -->
+            <input id="pet_code" type="hidden" class="validate" name="petId" value="">
+
+            <div class="modal-content">
+                <div class="row center-aligned">
+                    <div class="input-field col s4">
+                        <input class="datepicker" type="date" name="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select title="consult" name="consult">
+                            <option value="" disabled selected>Choose the consult</option>
+                            <option value="Query">Regular Consultation</option>
+                            <option value="Vaccine">Vaccination</option>
+                        </select>
+                        <label>Type</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">label</i>
+                        <select title="hour" name="hour">
+                            {{#intervals}}
+                            <option>{{.}}</option>
+                            {{/intervals}}
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+
+            <button class="btn waves-effect waves-light yellow black-text " type="submit" name="action"
+                    value="Save Client">
+                Make appointment
+                <i class="material-icons right">send</i>
+            </button>
+            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">
+                Cancel
+            </a>
+        </div>
+    </form>
+</div>
