@@ -85,9 +85,10 @@ public class ClientDashboardController {
        AppointmentMerger appointmentMerger = new AppointmentMerger(clientRepository);
        model.addAttribute("title", VetmanagerApplication.appName);
        model.addAttribute("navClients", true);
-       model.addAttribute("pets", appointmentMerger.getAppointmentsByClient(
+       model.addAttribute("appointments", appointmentMerger.getAppointmentsByClient(
                clientRepository.findByLegalID(Integer.parseInt(principal.getName()))
        ));
+       model.addAttribute("pets", clientRepository.findByLegalID(Integer.parseInt(principal.getName())).getPets());
 
        return "clientFrontend/appointments_data";
    }

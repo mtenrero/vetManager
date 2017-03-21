@@ -7,7 +7,19 @@
 <!-- CONTENT -->
 <main class="main-content">
     <!-- START WRAPPER -->
+
     <div class="container">
+        <div class="right-pill">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button btn-floating btn-large waves-effect waves-light purple' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+            {{#pets}}
+                <li><a href="#!">{{name}} : {{kind}}, {{breed.breed}}</a></li>
+            {{/pets}}
+            </ul>
+        </div>
         <form class="col s12" method="post" action="/clientDashboard/my-data" modelAttribute="client">
             {{> partialforms/appointment_view}}
             <br>
@@ -19,4 +31,5 @@
 
 
 {{> partials/footer }}
+<script src="/resources/js/clientDashboard.js"></script>
 </body>
