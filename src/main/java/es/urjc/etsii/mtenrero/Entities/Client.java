@@ -30,6 +30,7 @@ public class Client extends User {
     private String addressStreet;
     private String addressCity;
     private int addressZIP;
+    private int hoursBeforeNotification;
     private String email;
     @JsonIgnore
     @OneToMany(mappedBy = "client" , cascade = CascadeType.ALL)
@@ -160,5 +161,13 @@ public class Client extends User {
     @Override
     public int hashCode() {
         return this.legalID;
+    }
+
+    public int getHoursBeforeNotification() {
+        return hoursBeforeNotification;
+    }
+
+    public void setHoursBeforeNotification(int hoursBeforeNotification) {
+        this.hoursBeforeNotification = hoursBeforeNotification;
     }
 }

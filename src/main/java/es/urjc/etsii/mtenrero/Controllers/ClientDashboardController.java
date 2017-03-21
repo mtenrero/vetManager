@@ -34,6 +34,40 @@ public class ClientDashboardController {
         return "publicClientView";
     }
 
+
+    @GetMapping("/clientDashboard/my-preferences")
+    public String getMyPreferences(Principal principal, Model model, Pageable page) {
+        model.addAttribute("title", VetmanagerApplication.appName);
+        model.addAttribute("navClients", true);
+        model.addAttribute("client", clientRepository.findByLegalID(Integer.parseInt(principal.getName())));
+
+        System.out.print(principal.getName());
+
+        return "clientFrontend/personal_preferences";
+    }
+
+
+    /** UPDATE CONTROLLERS **/
+    @PostMapping("/clientDashboard/my-preferences")
+    public String updateMyPreferences(Principal principal, Model model, @RequestParam("hours") int hours) {
+
+        Client existingClient = clientRepository.findByLegalID(Integer.parseInt(principal.getName()));
+
+        existingClient.setHoursBeforeNotification(hours);
+
+        if (clientRepository.save(existingClient) != null) {
+            model.addAttribute("title", VetmanagerApplication.appName);
+            model.addAttribute("navClients", true);
+            model.addAttribute("savedClient", true);
+            model.addAttribute("toastMessage", "Client updated correctly!");
+
+        }
+
+
+
+        return "publicClientView";
+    }
+
     @GetMapping("/clientDashboard/my-data")
     public String getMyData(Principal principal, Model model, Pageable page) {
         model.addAttribute("title", VetmanagerApplication.appName);
