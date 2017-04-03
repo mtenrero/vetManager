@@ -18,14 +18,18 @@ services:
       - DB_PWD=vetManagerRemoteConnect1on
     ports:
       - "27017:27017"
+  iservice:
+    image: iservice:1.0
+    ports:
+      - "4444:4444"
   webservice:
-    build: .
+    image: webservice:1.1
     depends_on:
     - mariadb
     - mongo
+    - iservice
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
     ports:
      - "8443:8990"
-
