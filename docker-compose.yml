@@ -1,0 +1,31 @@
+version: '2'
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=vetManager13
+      - MYSQL_DATABASE=vetmanager
+      - MYSQL_USER=vetmanager
+      - MYSQL_PASSWORD=vetManagerRemoteConnect1on
+  mongo:
+    image: khezen/mongo:3.4
+    environment:
+      - AUTH=y
+      - ADMIN_USER=vetmanager
+      - ADMIN_PASSWORD=vetManager13
+      - DB_NAME=vetManagerSaaS
+      - DB_USER=vetmanager
+      - DB_PWD=vetManagerRemoteConnect1on
+    ports:
+      - "27017:27017"
+  webservice:
+    build: .
+    depends_on:
+    - mariadb
+    - mongo
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
+      spring.data.mongodb.host: mongo
+    ports:
+     - "8443:8990"
+
