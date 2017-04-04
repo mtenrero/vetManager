@@ -7,6 +7,8 @@ services:
       - MYSQL_DATABASE=vetmanager
       - MYSQL_USER=vetmanager
       - MYSQL_PASSWORD=vetManagerRemoteConnect1on
+    expose:
+      - 3306
   mongo:
     image: khezen/mongo:3.4
     environment:
@@ -16,12 +18,12 @@ services:
       - DB_NAME=vetManagerSaaS
       - DB_USER=vetmanager
       - DB_PWD=vetManagerRemoteConnect1on
-    ports:
-      - "27017:27017"
+    expose:
+      - 27017
   iservice:
     image: iservice:1.0
     ports:
-      - "4444:4444"
+      - 4444
   webservice:
     image: webservice:1.1
     depends_on:
