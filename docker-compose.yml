@@ -1,5 +1,21 @@
-version: '2'
+version: '3'
+
 services:
+  haproxy:
+    image: haproxy:alpine
+    ports:
+      - 70:70
+      - 80:80
+      - 443:443
+      - 8443:8443
+      - 1936:1936
+    links:
+      - webservice0
+      - webservice1
+      - webservice2
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy/
+
   mariadb:
     image: mariadb
     environment:
@@ -9,6 +25,7 @@ services:
       - MYSQL_PASSWORD=vetManagerRemoteConnect1on
     expose:
       - 3306
+
   mongo:
     image: khezen/mongo:3.4
     environment:
@@ -20,11 +37,25 @@ services:
       - DB_PWD=vetManagerRemoteConnect1on
     expose:
       - 27017
+
   iservice:
-    image: iservice:1.0
+    image: iservice:1.1
     ports:
-      - 4444
-  webservice:
+      - 8083
+
+  webservice0:
+    image: webservice:1.1
+    depends_on:
+    - mariadb
+    - mongo
+    - iservice
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
+      spring.data.mongodb.host: mongo
+    expose:
+     - 8990
+
+  webservice1:
     image: webservice:1.1
     depends_on:
     - mariadb
@@ -34,4 +65,18 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
     ports:
-     - "8443:8990"
+     - 8990
+
+  webservice2:
+    image: webservice:1.1
+    depends_on:
+    - mariadb
+    - mongo
+    - iservice
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
+      spring.data.mongodb.host: mongo
+    ports:
+     - 8990
+
+

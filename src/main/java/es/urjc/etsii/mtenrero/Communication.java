@@ -17,14 +17,14 @@ import java.util.Date;
 /**
  * Created by was12 on 15/03/2017.
  */
-public class Comunication {
+public class Communication {
     public  void main(String email,String subject,String body) throws UnknownHostException, IOException{
         RestTemplate restTemplate = new RestTemplate();
         MultiValueMap<String, String> map= new LinkedMultiValueMap<String, String>();
         map.add("email", email);
         map.add("subject", subject);
         map.add("body", body);
-        ResponseEntity<MailerResponse> response =  restTemplate.postForEntity("https://localhost:8443/sendEmail",map,MailerResponse.class);
+        ResponseEntity<MailerResponse> response =  restTemplate.postForEntity("https://localhost:8083/sendEmail",map,MailerResponse.class);
 
     }
 }
