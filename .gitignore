@@ -65,3 +65,19 @@ vetmanager\.iml
 src/main/resources/public/resources/styles/
 
 \.idea/webContexts\.xml
+
+.idea/artifacts/vetmanager_jar.xml
+
+.idea/kotlinc.xml
+
+.idea/workspace.xml
+
+.idea/workspace.xml
+
+.idea/workspace.xml
+
+src/main/\.DS_Store
+
+\.DS_Store
+
+\.idea/

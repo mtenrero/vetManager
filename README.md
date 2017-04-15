@@ -48,9 +48,6 @@ The endpoint is the same whoever you are, your clients can access to their pet h
 
 ----------
 
-Data entities
--------------------
-
  1. **Owner** 
  Personal info about client: name, owned pets, contact data…
  2. **Appointment** (N:1 Pet)
@@ -92,8 +89,19 @@ Optional features
 
 How to deploy
 -------------
+![Docker Logo](readmeFiles/docker.png)
 
-1. **Compile Sass:** You must execute mvn compile after lauch the Spring application.
+
+1. **Generate Artifacts:** Execute `mvn package -DskipTests` for each microservice and the webapp
+2. **Build docker images:** Now we need generate our local Docker images for each microservice and the web app with this Docker command: `docker build -t name:version .`
+3. **Run local version:** In the webapp parent directory execute `docker-compose up` it will configure an initial installation of the whole requirements needed to start the app:
+    
+    * MariaDB Server 
+    * mongoDB Server
+    * internal REST microservice
+    * multiple webapp instances
+    * HAProxy configured as load-balancer with TCP redirections to each instance of the webapp (this is the only container exposed to localhost)
+4. **Run distributed/production version:** As we use Docker to deploy in local, using Dockerfile to deploy in production is a good idea also. You need to edit each Dockerfile environment variables and match to your resources private IPs. The command used to run standalone images will be `docker run imagename:version`
 
 ----------
 
@@ -112,7 +120,7 @@ Fase 2
 
 Page information
 ----------------
-**Index:**    Home page of the applicationand only public page. You can access or create a user besides you can consult relevant information about the veterinary clinic.
+**Index:**    Home page of the application and only public page. You can access or create a user besides you can consult relevant information about the veterinary clinic.
 
 **Dashboard:**  Main window of the private part with addresses to the four main windows  
 
@@ -181,3 +189,5 @@ UML
 Entity relationship
 -------------------
 ![E/R](/readmeFiles/eer.png)
+
+
