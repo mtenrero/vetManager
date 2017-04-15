@@ -89,7 +89,7 @@ Optional features
 
 How to deploy
 -------------
-![Docker Logo](readmeFiles/docker.svg)
+![Docker Logo](readmeFiles/docker.png)
 
 
 1. **Generate Artifacts:** Execute `mvn package -DskipTests` for each microservice and the webapp
