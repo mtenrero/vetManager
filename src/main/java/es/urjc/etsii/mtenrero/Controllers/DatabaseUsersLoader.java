@@ -31,6 +31,7 @@ public class DatabaseUsersLoader {
         if (clientRepository.findAll().size() == 0) {
             Client def = new Client(123456789,"Marcos","Tenrero");
             def.setPhone1(123456789);
+            def.setEmail("vetmanagerApp@gmail.com");
             clientRepository.save(def);
         }
 
