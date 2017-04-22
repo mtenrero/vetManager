@@ -40,7 +40,7 @@ public class SettingsController {
         model.addAttribute("navSettings", true);
 
         model.addAttribute("preferences",preferenceRepository.findAll().get(0));
-        return "Settings";
+        return "settings";
     }
 
     @RequestMapping(value = "/dashboard/settings/update", method = RequestMethod.POST)
