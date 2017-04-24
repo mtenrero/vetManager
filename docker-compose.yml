@@ -10,11 +10,10 @@ services:
       - 8443:8443
       - 1936:1936
     links:
-      - webservice0
       - webservice1
       - webservice2
     volumes:
-      - ./haproxy:/usr/local/etc/haproxy/
+      - ./haproxy:/usr/local/etc/haproxy/local/
 
   mariadb:
     image: mariadb
@@ -43,18 +42,6 @@ services:
     ports:
       - 8083
 
-  webservice0:
-    image: webservice:1.1
-    depends_on:
-    - mariadb
-    - mongo
-    - iservice
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
-      spring.data.mongodb.host: mongo
-    expose:
-     - 8990
-
   webservice1:
     image: webservice:1.1
     depends_on:
@@ -64,7 +51,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
-    ports:
+    expose:
      - 8990
 
   webservice2:
@@ -78,5 +65,6 @@ services:
       spring.data.mongodb.host: mongo
     ports:
      - 8990
+
 
 
