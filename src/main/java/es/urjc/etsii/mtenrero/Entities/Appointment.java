@@ -1,12 +1,13 @@
 package es.urjc.etsii.mtenrero.Entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by was12 on 04/02/2017.
  */
 @Entity
-public class Appointment {
+public class Appointment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

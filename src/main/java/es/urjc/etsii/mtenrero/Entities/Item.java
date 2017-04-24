@@ -1,12 +1,16 @@
 package es.urjc.etsii.mtenrero.Entities;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by was12 on 06/02/2017.
  */
 @Entity
-public class Item{
+public class Item implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
