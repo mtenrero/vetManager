@@ -1,5 +1,6 @@
 package es.urjc.etsii.mtenrero.Controllers;
 
+import es.urjc.etsii.mtenrero.Communication;
 import es.urjc.etsii.mtenrero.Entities.Client;
 import es.urjc.etsii.mtenrero.Entities.Pet;
 import es.urjc.etsii.mtenrero.Entities.Appointment;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -53,7 +55,13 @@ public class AppointmentController {
         if (appointmentRepository.save(appointment) != null) {
             model.addAttribute("savedClient", true);
             model.addAttribute("toastMessage", "Appointment saved correctly!");
+            try {
+                new Communication().main(petRepository.findById(petId).getClient().getEmail(),"Se concerto una cita","Tu mascota tiene fechada una consulta");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+        model.addAttribute("intervals",this.preferenceRepository.findAll().get(0).generateWeekdayAppointmentIntervals());
         model.addAttribute("Appointment", appointmentRepository.findAll());
         return "appointments";
     }
