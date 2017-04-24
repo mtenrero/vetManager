@@ -190,4 +190,17 @@ Entity relationship
 -------------------
 ![E/R](/readmeFiles/eer.png)
 
+ Fase 4
+===================
+
+Azure Architecture and current Stack
+-----------------
+![Stack](/readmeFiles/stack.png)
+![Azure arch](/readmeFiles/arch.png)
+
+Our whole architecture are dockerized, so we need to expose some ports to host in order to achive communitcation between services:
+
+For example our Docker command to launch webservices is: `sudo docker run -i --name webservice -p 8443:8990 -e SPRING_DATASOURCE_URL="jdbc:mysql://VM:PORT/vetmanager" -e spring.data.mongodb.host="VM:PORT" webservice:1.1`
+
+And the command to run the HAProxy servcie : `sudo docker run -d -p 80:80 -p 443:443 -v $(pwd)/haproxy:/usr/local/etc/haproxy/ loadbalancer:1.0`
 
