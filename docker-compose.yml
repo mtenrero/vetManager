@@ -15,7 +15,11 @@ services:
       - webservice2
     volumes:
       - ./haproxy:/usr/local/etc/haproxy/
-
+  redis:
+      image: redis:3.0.3
+      hostname: redis
+      expose:
+        - 6379
   mariadb:
     image: mariadb
     environment:
@@ -49,9 +53,11 @@ services:
     - mariadb
     - mongo
     - iservice
+    - redis
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
+      spring.redis.host: redis
     expose:
      - 8990
 
@@ -61,9 +67,11 @@ services:
     - mariadb
     - mongo
     - iservice
+    - redis
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
+      spring.redis.host: redis
     ports:
      - 8990
 
@@ -73,9 +81,11 @@ services:
     - mariadb
     - mongo
     - iservice
+    - redis
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mariadb/vetmanager
       spring.data.mongodb.host: mongo
+      spring.redis.host: redis
     ports:
      - 8990
 
