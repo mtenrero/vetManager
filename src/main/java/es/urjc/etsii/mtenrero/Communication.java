@@ -24,7 +24,15 @@ public class Communication {
         map.add("email", email);
         map.add("subject", subject);
         map.add("body", body);
-        ResponseEntity<MailerResponse> response =  restTemplate.postForEntity("http://"+System.getenv("HAPROXY")+":8083/sendEmail",map,MailerResponse.class);
+        String requestUrl = "http://"+System.getenv("HAPROXY")+":8083/sendEmail";
+        ResponseEntity<MailerResponse> response =  restTemplate.postForEntity(requestUrl,map,MailerResponse.class);
+
+        System.out.println("REQUESTT_>>>>");
+        System.out.println(requestUrl);
+        System.out.println(email);
+        System.out.println(subject);
+        System.out.println(body);
+
 
     }
 }
