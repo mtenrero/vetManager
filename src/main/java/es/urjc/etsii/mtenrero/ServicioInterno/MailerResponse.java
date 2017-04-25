@@ -1,5 +1,7 @@
 package es.urjc.etsii.mtenrero.ServicioInterno;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by Adrian on 4/5/17.
  */
@@ -23,7 +25,9 @@ public class MailerResponse {
         this.message = message;
     }
 
+    public MailerResponse() {}
 
+    @Autowired
     public MailerResponse(boolean ok, String message) {
         this.ok = ok;
         this.message = message;
