@@ -1,5 +1,6 @@
 #!/bin/bash
 
+touch vars
 rm vars
 
 # MariaDB Node
