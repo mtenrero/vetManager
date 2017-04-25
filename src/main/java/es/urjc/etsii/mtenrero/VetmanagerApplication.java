@@ -14,6 +14,9 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLSession;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -47,6 +50,13 @@ public class VetmanagerApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(VetmanagerApplication.class, args);
 
+		HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+			public boolean verify(String hostname, SSLSession session) {
+				return true;
+			}
+		});
+
+		
 		ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
 		ses.scheduleAtFixedRate(new Runnable() {
 			@Override
