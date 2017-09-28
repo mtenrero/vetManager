@@ -1,6 +1,8 @@
 VetManager®: Cloud Veterinary Management
 ===================
 
+[![CircleCI](https://circleci.com/gh/mtenrero/vetManager/tree/master.svg?style=svg)](https://circleci.com/gh/mtenrero/vetManager/tree/master)
+
 [Video VetManager](https://youtu.be/0EutcBHhYCA)
 
 ----------
