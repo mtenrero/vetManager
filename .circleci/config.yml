@@ -40,18 +40,18 @@ jobs:
       - run: mvn package -Dmaven.test.skip=true
 
       - run:
-        name: Build Docker image
-        command: docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format="%h" --no-patch` .
+          name: Build Docker image
+          command: docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format="%h" --no-patch` .
 
       - run:
-        name: Tag Docker image
-        command: docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest
+          name: Tag Docker image
+          command: docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest
 
       - deploy:
-        name: Create SSH Tunnel
-        command: ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP
-        background: true 
+          name: Create SSH Tunnel
+          command: ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP
+          background: true 
       
       - deploy: 
-        name: Deploy to private registry
-        command: docker push localhost:5000/mtenrero/vetmanager-webservice:latest
+          name: Deploy to private registry
+          command: docker push localhost:5000/mtenrero/vetmanager-webservice:latest
