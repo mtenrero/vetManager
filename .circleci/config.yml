@@ -20,6 +20,11 @@ jobs:
       MAVEN_OPTS: -Xmx3200m
 
     steps:
+      - persist_to_workspace:
+        root: workspace
+        paths:
+          - target
+
       - checkout
 
       # Download and cache dependencies
@@ -39,6 +44,17 @@ jobs:
       # run compilation!
       - run: mvn package -Dmaven.test.skip=true
 
+
+  deployment:
+    docker:
+      - image: docker:stable
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+        at: /tmp/workspace
+
       - run:
           name: Build Docker image
           command: docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format="%h" --no-patch` .
@@ -55,3 +71,13 @@ jobs:
       - deploy: 
           name: Deploy to private registry
           command: docker push localhost:5000/mtenrero/vetmanager-webservice:latest
+
+workflows:
+  version: 2
+
+  btd:
+    jobs:
+      - build
+      - deployment
+        requires:
+          - build
