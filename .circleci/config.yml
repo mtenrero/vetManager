@@ -78,6 +78,6 @@ workflows:
   btd:
     jobs:
       - build
-      - deployment
+      - deployment:
         requires:
           - build
