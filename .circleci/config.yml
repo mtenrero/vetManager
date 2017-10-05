@@ -1,5 +1,5 @@
 jobs: 
-  building: 
+  package: 
     docker: 
       - 
         image: "circleci/openjdk:8-jdk"
@@ -56,9 +56,8 @@ version: 2
 workflows: 
   build-deploy: 
     jobs: 
-      - building
+      - package
       - 
         deployment: ~
         requires: 
-          - building
-  version: 2
+          - package
