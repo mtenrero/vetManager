@@ -4,7 +4,7 @@ jobs:
       - 
         image: "circleci/openjdk:8-jdk"
 
-    working_directory: /tmp/repo
+    working_directory: ~/repo
 
     environment: 
       MAVEN_OPTS: "-Xmx3200m"
@@ -12,7 +12,7 @@ jobs:
     steps: 
       - 
         persist_to_workspace: 
-          root: /tmp/repo
+          root: "~"
           paths: target
 
       - checkout
@@ -38,7 +38,7 @@ jobs:
     steps: 
       - 
         attach_workspace:
-          at: /tmp/workspace
+          at: "~"
       - 
         run: 
           name: "Build Docker image"
