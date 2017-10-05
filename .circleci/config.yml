@@ -10,11 +10,6 @@ jobs:
       MAVEN_OPTS: "-Xmx3200m"
 
     steps: 
-      - 
-        persist_to_workspace: 
-          root: "~"
-          paths: target
-
       - checkout
 
       - 
@@ -31,11 +26,20 @@ jobs:
             - ~/.m2
       - 
         run: "mvn package -Dmaven.test.skip=true"
+
+      - save_cache:
+          key: target
+          paths:
+            - target/vetmanager-0.0.1-SNAPSHOT.jar
   deploy: 
     docker: 
       - 
         image: "docker:stable"
     steps: 
+      - restore_cache:
+            keys:
+              - target/vetmanager-0.0.1-SNAPSHOT.jar-{{ checksum "vetmanager-0.0.1-SNAPSHOT.jar" }}
+              - target/vetmanager-0.0.1-SNAPSHOT.jar
       - 
         attach_workspace:
           at: "~"
