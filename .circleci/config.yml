@@ -1,83 +1,64 @@
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
-    working_directory: ~/repo
-
-    environment:
-      # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m
-
-    steps:
-      - persist_to_workspace:
+jobs: 
+  building: 
+    docker: 
+      - 
+        image: "circleci/openjdk:8-jdk"
+    environment: 
+      MAVEN_OPTS: "-Xmx3200m"
+    steps: 
+      - 
+        paths: target
+        persist_to_workspace: ~
         root: workspace
-        paths:
-          - target
-
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "pom.xml" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: mvn dependency:go-offline
-
-      - save_cache:
-          paths:
+      - 
+        restore_cache: 
+          keys: 
+            - "v1-dependencies-{{ checksum \"pom.xml\" }}"
+            - v1-dependencies-
+      - 
+        run: "mvn dependency:go-offline"
+      - 
+        save_cache: 
+          key: "v1-dependencies-{{ checksum \"pom.xml\" }}"
+          paths: 
             - ~/.m2
-          key: v1-dependencies-{{ checksum "pom.xml" }}
-
-      # run compilation!
-      - run: mvn package -Dmaven.test.skip=true
-
-
-  deployment:
-    docker:
-      - image: docker:stable
-
+      - 
+        run: "mvn package -Dmaven.test.skip=true"
     working_directory: ~/repo
-
-    steps:
-      - attach_workspace:
+  deployment: 
+    docker: 
+      - 
+        image: "docker:stable"
+    steps: 
+      - 
         at: /tmp/workspace
-
-      - run:
-          name: Build Docker image
-          command: docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format="%h" --no-patch` .
-
-      - run:
-          name: Tag Docker image
-          command: docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest
-
-      - deploy:
-          name: Create SSH Tunnel
-          command: ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP
-          background: true 
-      
-      - deploy: 
-          name: Deploy to private registry
-          command: docker push localhost:5000/mtenrero/vetmanager-webservice:latest
-
-workflows:
-  version: 2
-
-  btd:
-    jobs:
-      - build
-      - deployment:
-        requires:
+        attach_workspace: ~
+      - 
+        run: 
+          command: "docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format=\"%h\" --no-patch` ."
+          name: "Build Docker image"
+      - 
+        run: 
+          command: "docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest"
+          name: "Tag Docker image"
+      - 
+        deploy: 
+          background: true
+          command: "ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP"
+          name: "Create SSH Tunnel"
+      - 
+        deploy: 
+          command: "docker push localhost:5000/mtenrero/vetmanager-webservice:latest"
+          name: "Deploy to private registry"
+    working_directory: ~/repo
+version: 2
+workflows: 
+  build-deploy: 
+    jobs: 
+      - building
+      - 
+        deployment: ~
+        requires: 
           - build
+  version: 2
