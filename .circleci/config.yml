@@ -12,7 +12,7 @@ jobs:
     steps: 
       - 
         persist_to_workspace: 
-          root: .
+          root: /tmp/workspace
           paths: target
 
       - checkout
