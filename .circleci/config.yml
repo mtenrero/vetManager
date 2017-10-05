@@ -12,7 +12,7 @@ jobs:
     steps: 
       - 
         persist_to_workspace: 
-          root: /home/circleci/repo
+          root: .
           paths: target
 
       - checkout
