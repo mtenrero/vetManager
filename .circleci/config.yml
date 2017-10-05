@@ -60,5 +60,5 @@ workflows:
       - 
         deployment: ~
         requires: 
-          - build
+          - building
   version: 2
