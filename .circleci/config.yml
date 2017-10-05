@@ -3,14 +3,20 @@ jobs:
     docker: 
       - 
         image: "circleci/openjdk:8-jdk"
+
+    working_directory: ~/repo
+
     environment: 
       MAVEN_OPTS: "-Xmx3200m"
+
     steps: 
       - 
-        paths: target
-        persist_to_workspace: ~
+        persist_to_workspace: 
         root: workspace
+        paths: target
+
       - checkout
+
       - 
         restore_cache: 
           keys: 
@@ -25,39 +31,37 @@ jobs:
             - ~/.m2
       - 
         run: "mvn package -Dmaven.test.skip=true"
-    working_directory: ~/repo
-  deployment: 
+  deploy: 
     docker: 
       - 
         image: "docker:stable"
     steps: 
       - 
-        at: /tmp/workspace
         attach_workspace: ~
+        at: /tmp/workspace
       - 
         run: 
-          command: "docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format=\"%h\" --no-patch` ."
           name: "Build Docker image"
+          command: "docker build -t mtenrero/vetmanager-webservice:latest -t mtenrero/vetmanager-webservice:`git show --format=\"%h\" --no-patch` ."
       - 
         run: 
-          command: "docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest"
           name: "Tag Docker image"
+          command: "docker tag mtenrero/vetmanager-webservice:latest localhost:5000/mtenrero/vetmanager-webservice:latest"
       - 
         deploy: 
-          background: true
-          command: "ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP"
           name: "Create SSH Tunnel"
+          command: "ssh -nNT -L 5000:$HOST_IP:5000 $HOST_USER@$HOST_IP"
+          background: true
       - 
         deploy: 
-          command: "docker push localhost:5000/mtenrero/vetmanager-webservice:latest"
           name: "Deploy to private registry"
-    working_directory: ~/repo
+          command: "docker push localhost:5000/mtenrero/vetmanager-webservice:latest"
 version: 2
 workflows: 
   build-deploy: 
     jobs: 
       - build
       - 
-        deployment: ~
+        deploy:
         requires: 
           - build
