@@ -12,8 +12,8 @@ jobs:
     steps: 
       - 
         persist_to_workspace: 
-        root: workspace
-        paths: target
+          root: workspace
+          paths: target
 
       - checkout
 
@@ -37,8 +37,8 @@ jobs:
         image: "docker:stable"
     steps: 
       - 
-        attach_workspace: ~
-        at: /tmp/workspace
+        attach_workspace:
+          at: /tmp/workspace
       - 
         run: 
           name: "Build Docker image"
