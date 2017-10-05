@@ -56,8 +56,8 @@ jobs:
         deploy: 
           name: "Deploy to private registry"
           command: "docker push localhost:5000/mtenrero/vetmanager-webservice:latest"
-version: 2
-workflows: 
+workflows:
+  version: 2 
   build-deploy: 
     jobs: 
       - build
